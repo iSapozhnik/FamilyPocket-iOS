@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		FFB47E301EA94B2A00B36507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47E2F1EA94B2A00B36507 /* AppDelegate.swift */; };
-		FFB47E321EA94B2A00B36507 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47E311EA94B2A00B36507 /* ViewController.swift */; };
-		FFB47E351EA94B2A00B36507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB47E331EA94B2A00B36507 /* Main.storyboard */; };
 		FFB47E371EA94B2A00B36507 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB47E361EA94B2A00B36507 /* Assets.xcassets */; };
 		FFB47E3A1EA94B2A00B36507 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB47E381EA94B2A00B36507 /* LaunchScreen.storyboard */; };
 		FFB47E451EA94B2A00B36507 /* FamilyPocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47E441EA94B2A00B36507 /* FamilyPocketTests.swift */; };
 		FFB47E501EA94B2A00B36507 /* FamilyPocketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47E4F1EA94B2A00B36507 /* FamilyPocketUITests.swift */; };
+		FFB47E5F1EA94E5400B36507 /* AddNewExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47E5D1EA94E5400B36507 /* AddNewExpenseViewController.swift */; };
+		FFB47E601EA94E5400B36507 /* AddNewExpenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFB47E5E1EA94E5400B36507 /* AddNewExpenseViewController.xib */; };
+		FFB47E631EA94E7500B36507 /* ExpenseSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47E611EA94E7500B36507 /* ExpenseSummaryViewController.swift */; };
+		FFB47E641EA94E7500B36507 /* ExpenseSummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFB47E621EA94E7500B36507 /* ExpenseSummaryViewController.xib */; };
+		FFB47E661EA9512F00B36507 /* HostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47E651EA9512F00B36507 /* HostingViewController.swift */; };
+		FFB47E691EA955D700B36507 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47E681EA955D700B36507 /* NSObject+ClassName.swift */; };
+		FFB47E6B1EA9660700B36507 /* CircleTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47E6A1EA9660700B36507 /* CircleTransitionAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +41,6 @@
 /* Begin PBXFileReference section */
 		FFB47E2C1EA94B2A00B36507 /* FamilyPocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyPocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB47E2F1EA94B2A00B36507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FFB47E311EA94B2A00B36507 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FFB47E341EA94B2A00B36507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFB47E361EA94B2A00B36507 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFB47E391EA94B2A00B36507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFB47E3B1EA94B2A00B36507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +50,13 @@
 		FFB47E4B1EA94B2A00B36507 /* FamilyPocketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FamilyPocketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB47E4F1EA94B2A00B36507 /* FamilyPocketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyPocketUITests.swift; sourceTree = "<group>"; };
 		FFB47E511EA94B2A00B36507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFB47E5D1EA94E5400B36507 /* AddNewExpenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewExpenseViewController.swift; sourceTree = "<group>"; };
+		FFB47E5E1EA94E5400B36507 /* AddNewExpenseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNewExpenseViewController.xib; sourceTree = "<group>"; };
+		FFB47E611EA94E7500B36507 /* ExpenseSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseSummaryViewController.swift; sourceTree = "<group>"; };
+		FFB47E621EA94E7500B36507 /* ExpenseSummaryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpenseSummaryViewController.xib; sourceTree = "<group>"; };
+		FFB47E651EA9512F00B36507 /* HostingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostingViewController.swift; sourceTree = "<group>"; };
+		FFB47E681EA955D700B36507 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
+		FFB47E6A1EA9660700B36507 /* CircleTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleTransitionAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +108,13 @@
 			isa = PBXGroup;
 			children = (
 				FFB47E2F1EA94B2A00B36507 /* AppDelegate.swift */,
-				FFB47E311EA94B2A00B36507 /* ViewController.swift */,
-				FFB47E331EA94B2A00B36507 /* Main.storyboard */,
+				FFB47E651EA9512F00B36507 /* HostingViewController.swift */,
+				FFB47E5D1EA94E5400B36507 /* AddNewExpenseViewController.swift */,
+				FFB47E6A1EA9660700B36507 /* CircleTransitionAnimator.swift */,
+				FFB47E5E1EA94E5400B36507 /* AddNewExpenseViewController.xib */,
+				FFB47E611EA94E7500B36507 /* ExpenseSummaryViewController.swift */,
+				FFB47E621EA94E7500B36507 /* ExpenseSummaryViewController.xib */,
+				FFB47E671EA955C300B36507 /* Extensions */,
 				FFB47E361EA94B2A00B36507 /* Assets.xcassets */,
 				FFB47E381EA94B2A00B36507 /* LaunchScreen.storyboard */,
 				FFB47E3B1EA94B2A00B36507 /* Info.plist */,
@@ -123,6 +138,14 @@
 				FFB47E511EA94B2A00B36507 /* Info.plist */,
 			);
 			path = FamilyPocketUITests;
+			sourceTree = "<group>";
+		};
+		FFB47E671EA955C300B36507 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FFB47E681EA955D700B36507 /* NSObject+ClassName.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +257,8 @@
 			files = (
 				FFB47E3A1EA94B2A00B36507 /* LaunchScreen.storyboard in Resources */,
 				FFB47E371EA94B2A00B36507 /* Assets.xcassets in Resources */,
-				FFB47E351EA94B2A00B36507 /* Main.storyboard in Resources */,
+				FFB47E601EA94E5400B36507 /* AddNewExpenseViewController.xib in Resources */,
+				FFB47E641EA94E7500B36507 /* ExpenseSummaryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +283,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFB47E321EA94B2A00B36507 /* ViewController.swift in Sources */,
+				FFB47E691EA955D700B36507 /* NSObject+ClassName.swift in Sources */,
 				FFB47E301EA94B2A00B36507 /* AppDelegate.swift in Sources */,
+				FFB47E631EA94E7500B36507 /* ExpenseSummaryViewController.swift in Sources */,
+				FFB47E661EA9512F00B36507 /* HostingViewController.swift in Sources */,
+				FFB47E5F1EA94E5400B36507 /* AddNewExpenseViewController.swift in Sources */,
+				FFB47E6B1EA9660700B36507 /* CircleTransitionAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +324,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FFB47E331EA94B2A00B36507 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FFB47E341EA94B2A00B36507 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FFB47E381EA94B2A00B36507 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

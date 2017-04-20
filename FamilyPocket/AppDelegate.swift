@@ -16,6 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if window == nil {
+            window = UIWindow()
+        }
+        
+        let viewControllers = [ExpenseSummaryViewController(), AddNewExpenseViewController()]
+        let hostingVC = HostingViewController(with: viewControllers)
+        
+        window?.rootViewController = hostingVC
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
