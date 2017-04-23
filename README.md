@@ -1,4 +1,4 @@
-# FamilyPocket
+# FamilyPocket 💰
 Simple app for family budget tracking
 
 # Basic todo's:
