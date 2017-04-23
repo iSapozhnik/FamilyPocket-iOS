@@ -21,6 +21,10 @@
 		FFB47E661EA9512F00B36507 /* HostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47E651EA9512F00B36507 /* HostingViewController.swift */; };
 		FFB47E691EA955D700B36507 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47E681EA955D700B36507 /* NSObject+ClassName.swift */; };
 		FFB47E6B1EA9660700B36507 /* CircleTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47E6A1EA9660700B36507 /* CircleTransitionAnimator.swift */; };
+		FFE6DF391EAD00E200D333CA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE6DF381EAD00E200D333CA /* NotificationCenter.framework */; };
+		FFE6DF3C1EAD00E200D333CA /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE6DF3B1EAD00E200D333CA /* TodayViewController.swift */; };
+		FFE6DF3F1EAD00E200D333CA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE6DF3D1EAD00E200D333CA /* MainInterface.storyboard */; };
+		FFE6DF431EAD00E200D333CA /* FamilyPocketToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FFE6DF371EAD00E200D333CA /* FamilyPocketToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,28 @@
 			remoteGlobalIDString = FFB47E2B1EA94B2A00B36507;
 			remoteInfo = FamilyPocket;
 		};
+		FFE6DF411EAD00E200D333CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFB47E241EA94B2A00B36507 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFE6DF361EAD00E200D333CA;
+			remoteInfo = FamilyPocketToday;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FFE6DF471EAD00E200D333CA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FFE6DF431EAD00E200D333CA /* FamilyPocketToday.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		27422B3779408EE6FD0D0936 /* Pods-FamilyPocketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyPocketTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FamilyPocketTests/Pods-FamilyPocketTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +90,11 @@
 		FFB47E651EA9512F00B36507 /* HostingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostingViewController.swift; sourceTree = "<group>"; };
 		FFB47E681EA955D700B36507 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
 		FFB47E6A1EA9660700B36507 /* CircleTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleTransitionAnimator.swift; sourceTree = "<group>"; };
+		FFE6DF371EAD00E200D333CA /* FamilyPocketToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FamilyPocketToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFE6DF381EAD00E200D333CA /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		FFE6DF3B1EAD00E200D333CA /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		FFE6DF3E1EAD00E200D333CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		FFE6DF401EAD00E200D333CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +121,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FFE6DF341EAD00E200D333CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFE6DF391EAD00E200D333CA /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -99,6 +137,7 @@
 			children = (
 				DA04944A7179E23DE58CB724 /* Pods_FamilyPocket.framework */,
 				B0B2B8DD6A76593EC86FD9EE /* Pods_FamilyPocketTests.framework */,
+				FFE6DF381EAD00E200D333CA /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,6 +159,7 @@
 				FFB47E2E1EA94B2A00B36507 /* FamilyPocket */,
 				FFB47E431EA94B2A00B36507 /* FamilyPocketTests */,
 				FFB47E4E1EA94B2A00B36507 /* FamilyPocketUITests */,
+				FFE6DF3A1EAD00E200D333CA /* FamilyPocketToday */,
 				FFB47E2D1EA94B2A00B36507 /* Products */,
 				B07E0A67420C07D2A68DA9F7 /* Pods */,
 				7ABDE897EC1EB186D4CCAE47 /* Frameworks */,
@@ -132,6 +172,7 @@
 				FFB47E2C1EA94B2A00B36507 /* FamilyPocket.app */,
 				FFB47E401EA94B2A00B36507 /* FamilyPocketTests.xctest */,
 				FFB47E4B1EA94B2A00B36507 /* FamilyPocketUITests.xctest */,
+				FFE6DF371EAD00E200D333CA /* FamilyPocketToday.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,6 +221,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		FFE6DF3A1EAD00E200D333CA /* FamilyPocketToday */ = {
+			isa = PBXGroup;
+			children = (
+				FFE6DF3B1EAD00E200D333CA /* TodayViewController.swift */,
+				FFE6DF3D1EAD00E200D333CA /* MainInterface.storyboard */,
+				FFE6DF401EAD00E200D333CA /* Info.plist */,
+			);
+			path = FamilyPocketToday;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -193,10 +244,12 @@
 				FFB47E2A1EA94B2A00B36507 /* Resources */,
 				EB28B593F98B17FBA65DD63D /* [CP] Embed Pods Frameworks */,
 				9DF732CDD74ED90F67A4F113 /* [CP] Copy Pods Resources */,
+				FFE6DF471EAD00E200D333CA /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FFE6DF421EAD00E200D333CA /* PBXTargetDependency */,
 			);
 			name = FamilyPocket;
 			productName = FamilyPocket;
@@ -242,6 +295,23 @@
 			productReference = FFB47E4B1EA94B2A00B36507 /* FamilyPocketUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		FFE6DF361EAD00E200D333CA /* FamilyPocketToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFE6DF441EAD00E200D333CA /* Build configuration list for PBXNativeTarget "FamilyPocketToday" */;
+			buildPhases = (
+				FFE6DF331EAD00E200D333CA /* Sources */,
+				FFE6DF341EAD00E200D333CA /* Frameworks */,
+				FFE6DF351EAD00E200D333CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FamilyPocketToday;
+			productName = FamilyPocketToday;
+			productReference = FFE6DF371EAD00E200D333CA /* FamilyPocketToday.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -266,6 +336,10 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = FFB47E2B1EA94B2A00B36507;
 					};
+					FFE6DF361EAD00E200D333CA = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = FFB47E271EA94B2A00B36507 /* Build configuration list for PBXProject "FamilyPocket" */;
@@ -284,6 +358,7 @@
 				FFB47E2B1EA94B2A00B36507 /* FamilyPocket */,
 				FFB47E3F1EA94B2A00B36507 /* FamilyPocketTests */,
 				FFB47E4A1EA94B2A00B36507 /* FamilyPocketUITests */,
+				FFE6DF361EAD00E200D333CA /* FamilyPocketToday */,
 			);
 		};
 /* End PBXProject section */
@@ -311,6 +386,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFE6DF351EAD00E200D333CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFE6DF3F1EAD00E200D333CA /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +522,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FFE6DF331EAD00E200D333CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFE6DF3C1EAD00E200D333CA /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -452,6 +543,11 @@
 			target = FFB47E2B1EA94B2A00B36507 /* FamilyPocket */;
 			targetProxy = FFB47E4C1EA94B2A00B36507 /* PBXContainerItemProxy */;
 		};
+		FFE6DF421EAD00E200D333CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFE6DF361EAD00E200D333CA /* FamilyPocketToday */;
+			targetProxy = FFE6DF411EAD00E200D333CA /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -461,6 +557,14 @@
 				FFB47E391EA94B2A00B36507 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FFE6DF3D1EAD00E200D333CA /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFE6DF3E1EAD00E200D333CA /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -565,6 +669,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D1626303587FFBC6398A3C55 /* Pods-FamilyPocket.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FamilyPocket/Info.plist;
@@ -580,6 +685,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 311D483D7BC4071819FE95C0 /* Pods-FamilyPocket.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FamilyPocket/Info.plist;
@@ -647,6 +753,34 @@
 			};
 			name = Release;
 		};
+		FFE6DF451EAD00E200D333CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = FamilyPocketToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Ivan-Sapozhnik.FamilyPocket.FamilyPocketToday";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FFE6DF461EAD00E200D333CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = FamilyPocketToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Ivan-Sapozhnik.FamilyPocket.FamilyPocketToday";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -685,6 +819,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		FFE6DF441EAD00E200D333CA /* Build configuration list for PBXNativeTarget "FamilyPocketToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFE6DF451EAD00E200D333CA /* Debug */,
+				FFE6DF461EAD00E200D333CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
