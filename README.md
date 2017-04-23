@@ -12,5 +12,7 @@ Simple app for family budget tracking
 * Implement editing expense categories
 * Implement adding expenses
 * Implement viewing expenses by month
+* Implement Today extension
+* Implement Watch app
 * to be continued ...
  
