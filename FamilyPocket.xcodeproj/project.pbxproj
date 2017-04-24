@@ -93,6 +93,7 @@
 		FFE6DF771EAD578500D333CA /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		FFE6DF7A1EAD578500D333CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		FFE6DF7C1EAD578500D333CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFE6DF841EADD86000D333CA /* FamilyPocket.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FamilyPocket.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +177,7 @@
 		FFB47E2E1EA94B2A00B36507 /* FamilyPocket */ = {
 			isa = PBXGroup;
 			children = (
+				FFE6DF841EADD86000D333CA /* FamilyPocket.entitlements */,
 				FFB47E2F1EA94B2A00B36507 /* AppDelegate.swift */,
 				FFB47E651EA9512F00B36507 /* HostingViewController.swift */,
 				FFB47E5D1EA94E5400B36507 /* AddNewExpenseViewController.swift */,
@@ -321,6 +323,11 @@
 					FFB47E2B1EA94B2A00B36507 = {
 						CreatedOnToolsVersion = 8.3;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					FFB47E3F1EA94B2A00B36507 = {
 						CreatedOnToolsVersion = 8.3;
@@ -667,6 +674,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FamilyPocket/FamilyPocket.entitlements;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FamilyPocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -683,6 +691,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FamilyPocket/FamilyPocket.entitlements;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FamilyPocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -823,6 +832,7 @@
 				FFE6DF811EAD578500D333CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
