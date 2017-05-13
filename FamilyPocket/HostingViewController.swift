@@ -50,7 +50,7 @@ class HostingViewController: UIViewController {
         
         view.backgroundColor = .red
         selectedViewController = selectedViewController ?? viewControllers[0]
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
             self?.selectedViewController = self?.viewControllers[1]
         }
     }
@@ -71,11 +71,12 @@ class HostingViewController: UIViewController {
         view.addConstraint(NSLayoutConstraint.init(item: contentView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 0))
         
         
+        
     }
     
     fileprivate func transitionToChildViewController(_ toVC: UIViewController!) {
         
-        let fromVC = childViewControllers.count > 0 ? childViewControllers[0] : nil
+        let fromVC: UIViewController? = childViewControllers.count > 0 ? childViewControllers[0] : nil
         
         if toVC == fromVC || !isViewLoaded { return }
         
@@ -86,10 +87,30 @@ class HostingViewController: UIViewController {
         
         fromVC?.willMove(toParentViewController: nil)
         addChildViewController(toVC)
-        contentView.addSubview(toView)
-        fromVC?.view.removeFromSuperview()
-        fromVC?.removeFromParentViewController()
-        toVC.didMove(toParentViewController: self)
+        
+        // Initial display without animation
+        if fromVC == nil {
+            contentView.addSubview(toView)
+            toVC.didMove(toParentViewController: self)
+            return
+        }
+        
+        guard let formVCUnw = fromVC else { return }
+        guard let fromIndex = viewControllers.index(of: formVCUnw) else { return }
+        guard let toIndex = viewControllers.index(of: toVC) else { return }
+        
+        let animator = Animator()
+        
+        let context = PrivateTransitionContext(withFromViewController: formVCUnw, toViewController: toVC, goingRight: toIndex > fromIndex)
+        context.completionBlock = {
+            
+            formVCUnw.view.removeFromSuperview()
+            formVCUnw.removeFromParentViewController()
+            toVC.didMove(toParentViewController: self)
+            
+        }
+        
+        animator.animateTransition(using: context as! UIViewControllerContextTransitioning)
         
     }
 

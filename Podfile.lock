@@ -4,14 +4,17 @@ PODS:
   - Realm/Headers (2.5.1)
   - RealmSwift (2.5.1):
     - Realm (= 2.5.1)
+  - SegmentedProgressView (0.1.0)
 
 DEPENDENCIES:
   - RealmSwift
+  - SegmentedProgressView
 
 SPEC CHECKSUMS:
   Realm: 32f86104d37c8521f864d4274050b38ba6190733
   RealmSwift: f719e7511c902b8908593e8f143f59e47931bdb6
+  SegmentedProgressView: e9e3c4037c5c871686932bcce479e0694f59053d
 
-PODFILE CHECKSUM: c08d8375368038ae80b8703c1580b78f321ae97c
+PODFILE CHECKSUM: b2ff9a871373bb4ab1d9773959597848ba7cb9d9
 
 COCOAPODS: 1.2.0

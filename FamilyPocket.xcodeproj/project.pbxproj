@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		205EEA62DF6E821C42E82BDA /* Pods_FamilyPocketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B2B8DD6A76593EC86FD9EE /* Pods_FamilyPocketTests.framework */; };
 		E778E06F0492577B97658544 /* Pods_FamilyPocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA04944A7179E23DE58CB724 /* Pods_FamilyPocket.framework */; };
+		FFA7D7481EC73293009DF4C3 /* PrivateTransitionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7D7471EC73293009DF4C3 /* PrivateTransitionContext.swift */; };
+		FFA7D74A1EC73858009DF4C3 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7D7491EC73858009DF4C3 /* Animator.swift */; };
 		FFB47E301EA94B2A00B36507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47E2F1EA94B2A00B36507 /* AppDelegate.swift */; };
 		FFB47E371EA94B2A00B36507 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB47E361EA94B2A00B36507 /* Assets.xcassets */; };
 		FFB47E3A1EA94B2A00B36507 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB47E381EA94B2A00B36507 /* LaunchScreen.storyboard */; };
@@ -47,6 +49,8 @@
 		B0B2B8DD6A76593EC86FD9EE /* Pods_FamilyPocketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FamilyPocketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1626303587FFBC6398A3C55 /* Pods-FamilyPocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyPocket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FamilyPocket/Pods-FamilyPocket.debug.xcconfig"; sourceTree = "<group>"; };
 		DA04944A7179E23DE58CB724 /* Pods_FamilyPocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FamilyPocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFA7D7471EC73293009DF4C3 /* PrivateTransitionContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateTransitionContext.swift; sourceTree = "<group>"; };
+		FFA7D7491EC73858009DF4C3 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		FFB47E2C1EA94B2A00B36507 /* FamilyPocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyPocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB47E2F1EA94B2A00B36507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFB47E361EA94B2A00B36507 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 				FFB47E651EA9512F00B36507 /* HostingViewController.swift */,
 				FFB47E5D1EA94E5400B36507 /* AddNewExpenseViewController.swift */,
 				FFB47E6A1EA9660700B36507 /* CircleTransitionAnimator.swift */,
+				FFA7D7471EC73293009DF4C3 /* PrivateTransitionContext.swift */,
+				FFA7D7491EC73858009DF4C3 /* Animator.swift */,
 				FFB47E5E1EA94E5400B36507 /* AddNewExpenseViewController.xib */,
 				FFB47E611EA94E7500B36507 /* ExpenseSummaryViewController.swift */,
 				FFB47E621EA94E7500B36507 /* ExpenseSummaryViewController.xib */,
@@ -414,9 +420,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFA7D7481EC73293009DF4C3 /* PrivateTransitionContext.swift in Sources */,
 				FFB47E691EA955D700B36507 /* NSObject+ClassName.swift in Sources */,
 				FFB47E301EA94B2A00B36507 /* AppDelegate.swift in Sources */,
 				FFB47E631EA94E7500B36507 /* ExpenseSummaryViewController.swift in Sources */,
+				FFA7D74A1EC73858009DF4C3 /* Animator.swift in Sources */,
 				FFB47E661EA9512F00B36507 /* HostingViewController.swift in Sources */,
 				FFB47E5F1EA94E5400B36507 /* AddNewExpenseViewController.swift in Sources */,
 				FFB47E6B1EA9660700B36507 /* CircleTransitionAnimator.swift in Sources */,
