@@ -4,7 +4,7 @@ use_frameworks!
 
 def main_pods
 	pod 'RealmSwift'
-	pod "SegmentedProgressView"
+	pod 'SegmentedProgressView'
 end
 
 target 'FamilyPocket' do

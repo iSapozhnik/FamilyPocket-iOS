@@ -19,6 +19,8 @@
 		FFA7D7611EC790A3009DF4C3 /* CubeAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7D75C1EC790A3009DF4C3 /* CubeAttributesAnimator.swift */; };
 		FFA7D7661EC7948C009DF4C3 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7D7641EC7948C009DF4C3 /* CategoryCollectionViewCell.swift */; };
 		FFA7D7671EC7948C009DF4C3 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFA7D7651EC7948C009DF4C3 /* CategoryCollectionViewCell.xib */; };
+		FFA7D76A1EC7ABA9009DF4C3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7D7681EC7ABA9009DF4C3 /* SettingsViewController.swift */; };
+		FFA7D76B1EC7ABA9009DF4C3 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFA7D7691EC7ABA9009DF4C3 /* SettingsViewController.xib */; };
 		FFB47E301EA94B2A00B36507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47E2F1EA94B2A00B36507 /* AppDelegate.swift */; };
 		FFB47E371EA94B2A00B36507 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB47E361EA94B2A00B36507 /* Assets.xcassets */; };
 		FFB47E3A1EA94B2A00B36507 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB47E381EA94B2A00B36507 /* LaunchScreen.storyboard */; };
@@ -66,6 +68,8 @@
 		FFA7D75C1EC790A3009DF4C3 /* CubeAttributesAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubeAttributesAnimator.swift; sourceTree = "<group>"; };
 		FFA7D7641EC7948C009DF4C3 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFA7D7651EC7948C009DF4C3 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		FFA7D7681EC7ABA9009DF4C3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FFA7D7691EC7ABA9009DF4C3 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		FFB47E2C1EA94B2A00B36507 /* FamilyPocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyPocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB47E2F1EA94B2A00B36507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFB47E361EA94B2A00B36507 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -203,6 +207,8 @@
 				FFA7D7491EC73858009DF4C3 /* Animator.swift */,
 				FFB47E611EA94E7500B36507 /* ExpenseSummaryViewController.swift */,
 				FFB47E621EA94E7500B36507 /* ExpenseSummaryViewController.xib */,
+				FFA7D7681EC7ABA9009DF4C3 /* SettingsViewController.swift */,
+				FFA7D7691EC7ABA9009DF4C3 /* SettingsViewController.xib */,
 				FFA7D74B1EC76446009DF4C3 /* Views */,
 				FFA7D7501EC77C07009DF4C3 /* Delegates */,
 				FFB47E671EA955C300B36507 /* Extensions */,
@@ -353,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFB47E3A1EA94B2A00B36507 /* LaunchScreen.storyboard in Resources */,
+				FFA7D76B1EC7ABA9009DF4C3 /* SettingsViewController.xib in Resources */,
 				FFA7D7671EC7948C009DF4C3 /* CategoryCollectionViewCell.xib in Resources */,
 				FFB47E371EA94B2A00B36507 /* Assets.xcassets in Resources */,
 				FFB47E601EA94E5400B36507 /* AddNewExpenseViewController.xib in Resources */,
@@ -482,6 +489,7 @@
 				FFA7D7611EC790A3009DF4C3 /* CubeAttributesAnimator.swift in Sources */,
 				FFB47E631EA94E7500B36507 /* ExpenseSummaryViewController.swift in Sources */,
 				FFA7D74A1EC73858009DF4C3 /* Animator.swift in Sources */,
+				FFA7D76A1EC7ABA9009DF4C3 /* SettingsViewController.swift in Sources */,
 				FFA7D7561EC77FC8009DF4C3 /* AButton.swift in Sources */,
 				FFA7D7591EC77FDE009DF4C3 /* CurrencyTextfield.swift in Sources */,
 				FFB47E661EA9512F00B36507 /* HostingViewController.swift in Sources */,

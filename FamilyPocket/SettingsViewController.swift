@@ -1,28 +1,16 @@
 //
-//  ExpenseSummaryViewController.swift
+//  SettingsViewController.swift
 //  FamilyPocket
 //
-//  Created by Ivan Sapozhnik on 4/20/17.
+//  Created by Sapozhnik Ivan on 13/05/17.
 //  Copyright © 2017 Ivan Sapozhnik. All rights reserved.
 //
 
 import UIKit
 
-class ExpenseSummaryViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: ALabel!
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .default
-    }
-    
-    init() {
-        super.init(nibName: ExpenseSummaryViewController.className, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -32,8 +20,8 @@ class ExpenseSummaryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("ExpenseSummaryViewController viewDidLoad")
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

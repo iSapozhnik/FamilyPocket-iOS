@@ -35,7 +35,7 @@ class HostingViewController: UIViewController {
     init(with viewControllers: [UIViewController]) {
         
         self.viewControllers = viewControllers
-        self.selectedViewController = viewControllers.first
+        self.selectedViewController = viewControllers[1]
         
         super.init(nibName: nil, bundle: nil)
         
@@ -62,7 +62,7 @@ class HostingViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         view.backgroundColor = .red
-        selectedViewController = selectedViewController ?? viewControllers.first
+        selectedViewController = selectedViewController ?? viewControllers[1]
     }
     
     override func loadView() {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SegmentedProgressView
 
 extension UIColor {
     
@@ -68,6 +69,7 @@ class AddNewExpenseViewController: UIViewController, UICollectionViewDelegate, U
     @IBOutlet weak var currencyTextfield: CurrencyTextfield!
     @IBOutlet weak var overlayButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var segmentedProgress: SegmentedProgressView!
     
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
     var direction: UICollectionViewScrollDirection = .horizontal
@@ -115,6 +117,13 @@ class AddNewExpenseViewController: UIViewController, UICollectionViewDelegate, U
         
         collectionView.register(UINib.init(nibName: "CategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
         
+        var items: [ProgressItem] = []
+        for _ in 0...4 {
+            items.append(ProgressItem(withDuration: 3))
+        }
+        
+        segmentedProgress.itemSpace = 3.0
+        segmentedProgress.items = items
         
     }
     
