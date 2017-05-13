@@ -26,8 +26,6 @@ class ExpenseSummaryViewController: UIViewController {
         super.viewDidLoad()
         
         print("ExpenseSummaryViewController viewDidLoad")
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

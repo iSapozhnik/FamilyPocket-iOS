@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNewExpenseViewController" customModule="FamilyPocket" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="17g-LD-d36" id="KRe-9W-61s"/>
+                <outlet property="currencyTextfield" destination="4nT-p7-10k" id="uWk-Cu-3IP"/>
+                <outlet property="overlayButton" destination="CyW-ZP-1vb" id="itN-ns-8xI"/>
+                <outlet property="saveButton" destination="Yg5-jT-4nH" id="Ccp-H4-s0n"/>
+                <outlet property="saveButtonBottomConstraint" destination="l1m-yZ-jPc" id="ma9-HZ-cl9"/>
+                <outlet property="titleLabel" destination="Ptz-4Q-jxA" id="RXT-k1-R2l"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,7 +20,94 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptz-4Q-jxA" customClass="ALabel" customModule="FamilyPocket" customModuleProvider="target">
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <connections>
+                        <outlet property="topConstraint" destination="rFN-np-9Tu" id="Psg-iw-SGW"/>
+                    </connections>
+                </label>
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyW-ZP-1vb">
+                    <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="endEditing:" destination="-1" eventType="touchUpInside" id="Qml-sa-t26"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="€" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4nT-p7-10k" customClass="CurrencyTextfield" customModule="FamilyPocket" customModuleProvider="target">
+                    <color key="backgroundColor" white="1" alpha="0.10012189716312057" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="tvI-WW-TIc"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="28"/>
+                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="27"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="Jdz-mD-3ur" id="kKf-5H-z0s"/>
+                    </connections>
+                </textField>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="17g-LD-d36">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="cCb-VZ-CGX"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="wrG-dk-RSA" customClass="AnimatedCollectionViewLayout" customModule="FamilyPocket" customModuleProvider="target">
+                        <size key="itemSize" width="375" height="120"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="1TV-rU-hvI"/>
+                        <outlet property="delegate" destination="-1" id="WRV-Tc-ss9"/>
+                    </connections>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yg5-jT-4nH" customClass="AButton" customModule="FamilyPocket" customModuleProvider="target">
+                    <color key="backgroundColor" white="0.0" alpha="0.26218971631205673" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="pbj-hN-2rH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" title="Save">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onSave:" destination="-1" eventType="touchUpInside" id="WU8-Ah-wps"/>
+                        <outlet property="bottomConstraint" destination="l1m-yZ-jPc" id="p9X-57-C1h"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.058823529411764705" green="0.49803921568627452" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="17g-LD-d36" secondAttribute="trailing" id="6eB-9j-rCJ"/>
+                <constraint firstAttribute="trailing" secondItem="Yg5-jT-4nH" secondAttribute="trailing" id="AeE-Jq-OJi"/>
+                <constraint firstItem="Ptz-4Q-jxA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="BaF-FN-iTG"/>
+                <constraint firstAttribute="trailing" secondItem="4nT-p7-10k" secondAttribute="trailing" constant="40" id="JBK-2O-VCL"/>
+                <constraint firstItem="Yg5-jT-4nH" firstAttribute="top" secondItem="CyW-ZP-1vb" secondAttribute="bottom" id="P4D-2d-LMh"/>
+                <constraint firstItem="17g-LD-d36" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Tby-FY-2HN"/>
+                <constraint firstItem="17g-LD-d36" firstAttribute="top" secondItem="4nT-p7-10k" secondAttribute="bottom" constant="23" id="cAS-ps-Ilf"/>
+                <constraint firstAttribute="trailing" secondItem="CyW-ZP-1vb" secondAttribute="trailing" id="dAZ-ps-6Ms"/>
+                <constraint firstItem="Yg5-jT-4nH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eiL-uc-RXk"/>
+                <constraint firstAttribute="bottom" secondItem="Yg5-jT-4nH" secondAttribute="bottom" id="l1m-yZ-jPc"/>
+                <constraint firstItem="Ptz-4Q-jxA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="rFN-np-9Tu"/>
+                <constraint firstItem="4nT-p7-10k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="sMM-fF-FAY"/>
+                <constraint firstAttribute="trailing" secondItem="Ptz-4Q-jxA" secondAttribute="trailing" constant="50" id="tdb-B7-xac"/>
+                <constraint firstItem="CyW-ZP-1vb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vae-Mc-pR6"/>
+                <constraint firstItem="CyW-ZP-1vb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wM0-0B-Y0I"/>
+                <constraint firstItem="4nT-p7-10k" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="wuS-AC-iOq"/>
+            </constraints>
+            <point key="canvasLocation" x="26.5" y="52.5"/>
         </view>
+        <customObject id="Jdz-mD-3ur" customClass="TextfieldDelegate" customModule="FamilyPocket" customModuleProvider="target"/>
     </objects>
 </document>

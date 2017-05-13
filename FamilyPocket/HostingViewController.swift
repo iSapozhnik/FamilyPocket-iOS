@@ -16,7 +16,9 @@ class HostingViewController: UIViewController {
             transitionToChildViewController(newValue)
         }
         didSet {
-            
+            UIView.animate(withDuration: 0.3) { 
+                self.selectedViewController?.setNeedsStatusBarAppearanceUpdate()
+            }
         }
     }
     
@@ -37,6 +39,17 @@ class HostingViewController: UIViewController {
         
         super.init(nibName: nil, bundle: nil)
         
+        for c in viewControllers {
+            let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(HostingViewController.swipedLeft(_:)))
+            leftSwipe.direction = .right
+            
+            let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(HostingViewController.swipedRight(_:)))
+            rightSwipe.direction = .left
+            
+            c.view.addGestureRecognizer(leftSwipe)
+            c.view.addGestureRecognizer(rightSwipe)
+        }
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -49,10 +62,7 @@ class HostingViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         view.backgroundColor = .red
-        selectedViewController = selectedViewController ?? viewControllers[0]
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-            self?.selectedViewController = self?.viewControllers[1]
-        }
+        selectedViewController = selectedViewController ?? viewControllers.first
     }
     
     override func loadView() {
@@ -79,8 +89,9 @@ class HostingViewController: UIViewController {
         if toVC == fromVC || !isViewLoaded { return }
         
         guard let toView = toVC.view else { return }
-        toView.translatesAutoresizingMaskIntoConstraints = true
-        toView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        toView.translatesAutoresizingMaskIntoConstraints = false
+//        toView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         toView.frame = contentView.bounds
         
         fromVC?.willMove(toParentViewController: nil)
@@ -89,6 +100,12 @@ class HostingViewController: UIViewController {
         // Initial display without animation
         if fromVC == nil {
             contentView.addSubview(toView)
+            
+            contentView.addConstraint(NSLayoutConstraint.init(item: toView, attribute: .width, relatedBy: .equal, toItem: contentView, attribute: .width, multiplier: 1, constant: 0))
+            contentView.addConstraint(NSLayoutConstraint.init(item: toView, attribute: .height, relatedBy: .equal, toItem: contentView, attribute: .height, multiplier: 1, constant: 0))
+            contentView.addConstraint(NSLayoutConstraint.init(item: toView, attribute: .left, relatedBy: .equal, toItem: contentView, attribute: .left, multiplier: 1, constant: 0))
+            contentView.addConstraint(NSLayoutConstraint.init(item: toView, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: 0))
+            
             toVC.didMove(toParentViewController: self)
             return
         }
@@ -101,20 +118,36 @@ class HostingViewController: UIViewController {
         
         let context = PrivateTransitionContext(withFromViewController: formVCUnw, toViewController: toVC, goingRight: toIndex > fromIndex)
         context.completionBlock = {
-            
+
             formVCUnw.view.removeFromSuperview()
             formVCUnw.removeFromParentViewController()
             toVC.didMove(toParentViewController: self)
-            
         }
         
         animator.animateTransition(using: context)
+    }
+    
+    func swipedLeft(_ gesture: UIGestureRecognizer) {
         
+        guard let selectedVC = selectedViewController else { return }
+        guard var toIndex = viewControllers.index(of: selectedVC) else { return }
+        
+        toIndex -= 1
+        
+        if toIndex >= 0 && toIndex < viewControllers.count {
+            selectedViewController = viewControllers[toIndex]
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func swipedRight(_ gesture: UIGestureRecognizer) {
+        
+        guard let selectedVC = selectedViewController else { return }
+        guard var toIndex = viewControllers.index(of: selectedVC) else { return }
+        
+        toIndex += 1
+        
+        if toIndex < viewControllers.count {
+            selectedViewController = viewControllers[toIndex]
+        }
     }
-
 }

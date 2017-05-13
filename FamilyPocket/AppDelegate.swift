@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window = UIWindow()
         }
         
-        let viewControllers = [ExpenseSummaryViewController(), AddNewExpenseViewController()]
+        let viewControllers = [AddNewExpenseViewController(), ExpenseSummaryViewController()]
         let hostingVC = HostingViewController(with: viewControllers)
         
         window?.rootViewController = hostingVC
