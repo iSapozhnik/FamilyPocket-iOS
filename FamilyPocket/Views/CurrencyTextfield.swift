@@ -77,4 +77,9 @@ class CurrencyTextfield: UITextField, AlphaAnimatable {
             }, completion: nil)
     }
     
+    func reset() {
+        text = ""
+        editingChanged()
+    }
+    
 }

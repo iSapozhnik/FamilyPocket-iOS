@@ -133,8 +133,15 @@ class AddNewExpenseViewController: UIViewController, UICollectionViewDelegate, U
         }
     }
     
+    @IBAction func onExpense(_ sender: AnyObject) {
+        currencyTextfield.text = "-8"
+        currencyTextfield.editingChanged()
+    }
+    
     @IBAction func onSave(_ sender: AnyObject) {
         print("save!")
+        currencyTextfield.reset()
+        view.endEditing(true)
     }
 
     func keyboardWillShow(notification: NSNotification) {

@@ -52,6 +52,31 @@
                         <outlet property="delegate" destination="Jdz-mD-3ur" id="kKf-5H-z0s"/>
                     </connections>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yu-WL-g6m">
+                    <color key="backgroundColor" red="0.85490196080000003" green="0.14117647059999999" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="84j-vd-zI9"/>
+                        <constraint firstAttribute="width" constant="40" id="Y6K-Gj-rOd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
+                    <state key="normal" title="Expense">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onExpense:" destination="-1" eventType="touchUpInside" id="hvJ-uT-caS"/>
+                    </connections>
+                </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="17g-LD-d36">
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -86,13 +111,39 @@
                         <outlet property="bottomConstraint" destination="l1m-yZ-jPc" id="p9X-57-C1h"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Df-Vh-7l0">
+                    <color key="backgroundColor" red="0.29227846860000001" green="0.78080707790000003" blue="0.45123803620000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="uxC-2i-Knf"/>
+                        <constraint firstAttribute="width" constant="40" id="xs3-gX-SAI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
+                    <state key="normal" title="Income">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.058823529411764705" green="0.49803921568627452" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="1Df-Vh-7l0" firstAttribute="centerY" secondItem="4nT-p7-10k" secondAttribute="centerY" id="1Zo-y8-h31"/>
+                <constraint firstItem="4nT-p7-10k" firstAttribute="leading" secondItem="7yu-WL-g6m" secondAttribute="trailing" constant="8" id="1ex-HD-XZ0"/>
                 <constraint firstAttribute="trailing" secondItem="17g-LD-d36" secondAttribute="trailing" id="6eB-9j-rCJ"/>
+                <constraint firstItem="7yu-WL-g6m" firstAttribute="centerY" secondItem="4nT-p7-10k" secondAttribute="centerY" id="7iK-ol-edx"/>
                 <constraint firstAttribute="trailing" secondItem="Yg5-jT-4nH" secondAttribute="trailing" id="AeE-Jq-OJi"/>
                 <constraint firstItem="Ptz-4Q-jxA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="BaF-FN-iTG"/>
-                <constraint firstAttribute="trailing" secondItem="4nT-p7-10k" secondAttribute="trailing" constant="40" id="JBK-2O-VCL"/>
+                <constraint firstItem="1Df-Vh-7l0" firstAttribute="leading" secondItem="4nT-p7-10k" secondAttribute="trailing" constant="8" id="CZW-L9-6KB"/>
+                <constraint firstAttribute="trailing" secondItem="4nT-p7-10k" secondAttribute="trailing" constant="55" id="JBK-2O-VCL"/>
                 <constraint firstItem="Yg5-jT-4nH" firstAttribute="top" secondItem="CyW-ZP-1vb" secondAttribute="bottom" id="P4D-2d-LMh"/>
                 <constraint firstItem="17g-LD-d36" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Tby-FY-2HN"/>
                 <constraint firstItem="17g-LD-d36" firstAttribute="top" secondItem="4nT-p7-10k" secondAttribute="bottom" constant="23" id="cAS-ps-Ilf"/>
@@ -100,7 +151,7 @@
                 <constraint firstItem="Yg5-jT-4nH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eiL-uc-RXk"/>
                 <constraint firstAttribute="bottom" secondItem="Yg5-jT-4nH" secondAttribute="bottom" id="l1m-yZ-jPc"/>
                 <constraint firstItem="Ptz-4Q-jxA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="rFN-np-9Tu"/>
-                <constraint firstItem="4nT-p7-10k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="sMM-fF-FAY"/>
+                <constraint firstItem="4nT-p7-10k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="55" id="sMM-fF-FAY"/>
                 <constraint firstAttribute="trailing" secondItem="Ptz-4Q-jxA" secondAttribute="trailing" constant="50" id="tdb-B7-xac"/>
                 <constraint firstItem="CyW-ZP-1vb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vae-Mc-pR6"/>
                 <constraint firstItem="CyW-ZP-1vb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wM0-0B-Y0I"/>
