@@ -22,7 +22,7 @@ class CategoryManager: Persistable {
             dataImporter.importCategories()
         }
         
-        let categories = realm.objects(Category.self)
+        let categories = realm.objects(Category.self).sorted(byKeyPath: "popularity", ascending: false)
         completion(Array(categories))
     }
     
