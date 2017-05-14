@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,22 +17,34 @@
                 <rect key="frame" x="0.0" y="0.0" width="247" height="91"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPo-DJ-bDJ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPo-DJ-bDJ">
+                        <rect key="frame" x="4" y="15" width="223" height="62"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="40"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C28-9d-YkI">
+                        <rect key="frame" x="-30" y="31.5" width="27" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="27" id="83u-9w-4fv"/>
+                            <constraint firstAttribute="width" constant="27" id="DrL-PZ-rhh"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="C28-9d-YkI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="-30" id="6zo-eG-n0w"/>
                 <constraint firstItem="OPo-DJ-bDJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="94t-v0-X6I"/>
                 <constraint firstAttribute="bottom" secondItem="OPo-DJ-bDJ" secondAttribute="bottom" constant="14" id="Xae-9x-Dgq"/>
+                <constraint firstItem="C28-9d-YkI" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="bA2-jG-lcB"/>
                 <constraint firstItem="OPo-DJ-bDJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="lmV-zX-zXx"/>
-                <constraint firstAttribute="trailing" secondItem="OPo-DJ-bDJ" secondAttribute="trailing" constant="4" id="u1l-Dy-2XX"/>
+                <constraint firstAttribute="trailing" secondItem="OPo-DJ-bDJ" secondAttribute="trailing" constant="20" id="u1l-Dy-2XX"/>
             </constraints>
             <size key="customSize" width="247" height="91"/>
             <connections>
+                <outlet property="iconLeftConstraint" destination="6zo-eG-n0w" id="qNX-23-Mn8"/>
+                <outlet property="iconView" destination="C28-9d-YkI" id="VPV-5O-Y4s"/>
                 <outlet property="titleLabel" destination="OPo-DJ-bDJ" id="1Vb-Mj-eGW"/>
             </connections>
             <point key="canvasLocation" x="123.5" y="72.5"/>
