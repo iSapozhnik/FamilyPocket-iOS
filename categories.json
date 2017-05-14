@@ -1,0 +1,25 @@
+{
+  "categories": [
+    {
+      "name": "Internet",
+      "dateOfCreation": "2014-06-25",
+      "popularity": 3,
+      "color": "#42b3f4",
+      "iconName": "internet.png"
+    },
+    {
+      "name": "Food",
+      "dateOfCreation": "2014-06-25",
+      "popularity": 112,
+      "color": "#42b3f4",
+      "iconName": "Food.png"
+    },
+    {
+      "name": "Transport",
+      "dateOfCreation": "2014-06-25",
+      "popularity": 10,
+      "color": "#42b3f4",
+      "iconName": "Transport.png"
+    }
+  ]
+}
