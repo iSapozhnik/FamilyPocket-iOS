@@ -38,17 +38,6 @@ class RealmDataImporter {
             
             guard let categories: Array<Dictionary<String,Any>> = jsonResult["categories"] as? Array<Dictionary<String,Any>> else { return }
             
-            /* Removing database
-            if let url = Realm.Configuration.defaultConfiguration.fileURL {
-                do {
-                    try FileManager.default.removeItem(at: url)
-                    print("Old database removed!")
-                } catch let error {
-                    print("Error deleting Realm database: \(error.localizedDescription)")
-                }
-            }
-            */
-            
             realm.beginWrite()
             
             for category in categories {
@@ -71,6 +60,20 @@ class RealmDataImporter {
             }
         } else {
             print("No import needed")
+        }
+    }
+    
+    func removeData() {
+        
+        if let url = Realm.Configuration.defaultConfiguration.fileURL {
+            do {
+                try FileManager.default.removeItem(at: url)
+                UserDefaults.standard.set(false, forKey: initialDataImportedKey)
+                UserDefaults.standard.synchronize()
+                print("Old database removed!")
+            } catch let error {
+                print("Error deleting Realm database: \(error.localizedDescription)")
+            }
         }
     }
     

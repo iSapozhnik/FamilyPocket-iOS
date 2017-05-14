@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window = UIWindow()
         }
         
+//        let importer = RealmDataImporter()
+//        importer.removeData()
+        
         let viewControllers = [SettingsViewController(), AddNewExpenseViewController(), ExpenseSummaryViewController(), ColorPaletteTableViewController()]
         let hostingVC = HostingViewController(with: viewControllers)
         

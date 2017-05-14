@@ -33,6 +33,15 @@
 		FFA47C421EC8E54000465E11 /* ColorPaletteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C411EC8E54000465E11 /* ColorPaletteTableViewController.swift */; };
 		FFA47C451EC8E59B00465E11 /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C431EC8E59B00465E11 /* ColorTableViewCell.swift */; };
 		FFA47C461EC8E59B00465E11 /* ColorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFA47C441EC8E59B00465E11 /* ColorTableViewCell.xib */; };
+		FFA47C621EC8F47F00465E11 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA47C601EC8F47F00465E11 /* Interface.storyboard */; };
+		FFA47C641EC8F47F00465E11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA47C631EC8F47F00465E11 /* Assets.xcassets */; };
+		FFA47C6B1EC8F47F00465E11 /* FamilyPocketWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FFA47C6A1EC8F47F00465E11 /* FamilyPocketWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FFA47C721EC8F47F00465E11 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C711EC8F47F00465E11 /* InterfaceController.swift */; };
+		FFA47C741EC8F47F00465E11 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C731EC8F47F00465E11 /* ExtensionDelegate.swift */; };
+		FFA47C761EC8F47F00465E11 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C751EC8F47F00465E11 /* NotificationController.swift */; };
+		FFA47C781EC8F47F00465E11 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C771EC8F47F00465E11 /* ComplicationController.swift */; };
+		FFA47C7A1EC8F47F00465E11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA47C791EC8F47F00465E11 /* Assets.xcassets */; };
+		FFA47C7E1EC8F47F00465E11 /* FamilyPocketWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FFA47C5E1EC8F47F00465E11 /* FamilyPocketWatch.app */; };
 		FFA7D7561EC77FC8009DF4C3 /* AButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7D7541EC77FC8009DF4C3 /* AButton.swift */; };
 		FFA7D7571EC77FC8009DF4C3 /* ALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7D7551EC77FC8009DF4C3 /* ALabel.swift */; };
 		FFA7D7591EC77FDE009DF4C3 /* CurrencyTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7D7581EC77FDE009DF4C3 /* CurrencyTextfield.swift */; };
@@ -49,6 +58,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FFA47C6C1EC8F47F00465E11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFB47E241EA94B2A00B36507 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFA47C691EC8F47F00465E11;
+			remoteInfo = "FamilyPocketWatch Extension";
+		};
+		FFA47C7C1EC8F47F00465E11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFB47E241EA94B2A00B36507 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFA47C5D1EC8F47F00465E11;
+			remoteInfo = FamilyPocketWatch;
+		};
 		FFB47E411EA94B2A00B36507 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FFB47E241EA94B2A00B36507 /* Project object */;
@@ -64,6 +87,31 @@
 			remoteInfo = FamilyPocket;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FFA47C841EC8F47F00465E11 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FFA47C6B1EC8F47F00465E11 /* FamilyPocketWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFA47C861EC8F47F00465E11 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				FFA47C7E1EC8F47F00465E11 /* FamilyPocketWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		27422B3779408EE6FD0D0936 /* Pods-FamilyPocketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyPocketTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FamilyPocketTests/Pods-FamilyPocketTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +144,18 @@
 		FFA47C411EC8E54000465E11 /* ColorPaletteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPaletteTableViewController.swift; sourceTree = "<group>"; };
 		FFA47C431EC8E59B00465E11 /* ColorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
 		FFA47C441EC8E59B00465E11 /* ColorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorTableViewCell.xib; sourceTree = "<group>"; };
+		FFA47C5E1EC8F47F00465E11 /* FamilyPocketWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyPocketWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFA47C611EC8F47F00465E11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		FFA47C631EC8F47F00465E11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFA47C651EC8F47F00465E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFA47C6A1EC8F47F00465E11 /* FamilyPocketWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FamilyPocketWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFA47C701EC8F47F00465E11 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		FFA47C711EC8F47F00465E11 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		FFA47C731EC8F47F00465E11 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		FFA47C751EC8F47F00465E11 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		FFA47C771EC8F47F00465E11 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		FFA47C791EC8F47F00465E11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFA47C7B1EC8F47F00465E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFA7D7541EC77FC8009DF4C3 /* AButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AButton.swift; sourceTree = "<group>"; };
 		FFA7D7551EC77FC8009DF4C3 /* ALabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALabel.swift; sourceTree = "<group>"; };
 		FFA7D7581EC77FDE009DF4C3 /* CurrencyTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyTextfield.swift; sourceTree = "<group>"; };
@@ -118,6 +178,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FFA47C671EC8F47F00465E11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFB47E291EA94B2A00B36507 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -251,6 +318,38 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		FFA47C5F1EC8F47F00465E11 /* FamilyPocketWatch */ = {
+			isa = PBXGroup;
+			children = (
+				FFA47C601EC8F47F00465E11 /* Interface.storyboard */,
+				FFA47C631EC8F47F00465E11 /* Assets.xcassets */,
+				FFA47C651EC8F47F00465E11 /* Info.plist */,
+			);
+			path = FamilyPocketWatch;
+			sourceTree = "<group>";
+		};
+		FFA47C6E1EC8F47F00465E11 /* FamilyPocketWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FFA47C711EC8F47F00465E11 /* InterfaceController.swift */,
+				FFA47C731EC8F47F00465E11 /* ExtensionDelegate.swift */,
+				FFA47C751EC8F47F00465E11 /* NotificationController.swift */,
+				FFA47C771EC8F47F00465E11 /* ComplicationController.swift */,
+				FFA47C791EC8F47F00465E11 /* Assets.xcassets */,
+				FFA47C7B1EC8F47F00465E11 /* Info.plist */,
+				FFA47C6F1EC8F47F00465E11 /* Supporting Files */,
+			);
+			path = "FamilyPocketWatch Extension";
+			sourceTree = "<group>";
+		};
+		FFA47C6F1EC8F47F00465E11 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FFA47C701EC8F47F00465E11 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		FFA7D74B1EC76446009DF4C3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +398,8 @@
 				FFA47C1D1EC88F9600465E11 /* Resources */,
 				FFB47E431EA94B2A00B36507 /* FamilyPocketTests */,
 				FFB47E4E1EA94B2A00B36507 /* FamilyPocketUITests */,
+				FFA47C5F1EC8F47F00465E11 /* FamilyPocketWatch */,
+				FFA47C6E1EC8F47F00465E11 /* FamilyPocketWatch Extension */,
 				FFB47E2D1EA94B2A00B36507 /* Products */,
 				B07E0A67420C07D2A68DA9F7 /* Pods */,
 				7ABDE897EC1EB186D4CCAE47 /* Frameworks */,
@@ -311,6 +412,8 @@
 				FFB47E2C1EA94B2A00B36507 /* FamilyPocket.app */,
 				FFB47E401EA94B2A00B36507 /* FamilyPocketTests.xctest */,
 				FFB47E4B1EA94B2A00B36507 /* FamilyPocketUITests.xctest */,
+				FFA47C5E1EC8F47F00465E11 /* FamilyPocketWatch.app */,
+				FFA47C6A1EC8F47F00465E11 /* FamilyPocketWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -364,6 +467,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FFA47C5D1EC8F47F00465E11 /* FamilyPocketWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFA47C851EC8F47F00465E11 /* Build configuration list for PBXNativeTarget "FamilyPocketWatch" */;
+			buildPhases = (
+				FFA47C5C1EC8F47F00465E11 /* Resources */,
+				FFA47C841EC8F47F00465E11 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFA47C6D1EC8F47F00465E11 /* PBXTargetDependency */,
+			);
+			name = FamilyPocketWatch;
+			productName = FamilyPocketWatch;
+			productReference = FFA47C5E1EC8F47F00465E11 /* FamilyPocketWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		FFA47C691EC8F47F00465E11 /* FamilyPocketWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFA47C831EC8F47F00465E11 /* Build configuration list for PBXNativeTarget "FamilyPocketWatch Extension" */;
+			buildPhases = (
+				FFA47C661EC8F47F00465E11 /* Sources */,
+				FFA47C671EC8F47F00465E11 /* Frameworks */,
+				FFA47C681EC8F47F00465E11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FamilyPocketWatch Extension";
+			productName = "FamilyPocketWatch Extension";
+			productReference = FFA47C6A1EC8F47F00465E11 /* FamilyPocketWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		FFB47E2B1EA94B2A00B36507 /* FamilyPocket */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFB47E541EA94B2A00B36507 /* Build configuration list for PBXNativeTarget "FamilyPocket" */;
@@ -374,10 +511,12 @@
 				FFB47E2A1EA94B2A00B36507 /* Resources */,
 				EB28B593F98B17FBA65DD63D /* [CP] Embed Pods Frameworks */,
 				9DF732CDD74ED90F67A4F113 /* [CP] Copy Pods Resources */,
+				FFA47C861EC8F47F00465E11 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FFA47C7D1EC8F47F00465E11 /* PBXTargetDependency */,
 			);
 			name = FamilyPocket;
 			productName = FamilyPocket;
@@ -433,6 +572,16 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Ivan Sapozhnik";
 				TargetAttributes = {
+					FFA47C5D1EC8F47F00465E11 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 54HW5825ZV;
+						ProvisioningStyle = Automatic;
+					};
+					FFA47C691EC8F47F00465E11 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 54HW5825ZV;
+						ProvisioningStyle = Automatic;
+					};
 					FFB47E2B1EA94B2A00B36507 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 54HW5825ZV;
@@ -466,11 +615,30 @@
 				FFB47E2B1EA94B2A00B36507 /* FamilyPocket */,
 				FFB47E3F1EA94B2A00B36507 /* FamilyPocketTests */,
 				FFB47E4A1EA94B2A00B36507 /* FamilyPocketUITests */,
+				FFA47C5D1EC8F47F00465E11 /* FamilyPocketWatch */,
+				FFA47C691EC8F47F00465E11 /* FamilyPocketWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FFA47C5C1EC8F47F00465E11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFA47C641EC8F47F00465E11 /* Assets.xcassets in Resources */,
+				FFA47C621EC8F47F00465E11 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFA47C681EC8F47F00465E11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFA47C7A1EC8F47F00465E11 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFB47E2A1EA94B2A00B36507 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -596,6 +764,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FFA47C661EC8F47F00465E11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFA47C761EC8F47F00465E11 /* NotificationController.swift in Sources */,
+				FFA47C781EC8F47F00465E11 /* ComplicationController.swift in Sources */,
+				FFA47C741EC8F47F00465E11 /* ExtensionDelegate.swift in Sources */,
+				FFA47C721EC8F47F00465E11 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFB47E281EA94B2A00B36507 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -649,6 +828,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FFA47C6D1EC8F47F00465E11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFA47C691EC8F47F00465E11 /* FamilyPocketWatch Extension */;
+			targetProxy = FFA47C6C1EC8F47F00465E11 /* PBXContainerItemProxy */;
+		};
+		FFA47C7D1EC8F47F00465E11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFA47C5D1EC8F47F00465E11 /* FamilyPocketWatch */;
+			targetProxy = FFA47C7C1EC8F47F00465E11 /* PBXContainerItemProxy */;
+		};
 		FFB47E421EA94B2A00B36507 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FFB47E2B1EA94B2A00B36507 /* FamilyPocket */;
@@ -662,6 +851,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FFA47C601EC8F47F00465E11 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFA47C611EC8F47F00465E11 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		FFB47E381EA94B2A00B36507 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -673,6 +870,76 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FFA47C7F1EC8F47F00465E11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 54HW5825ZV;
+				IBSC_MODULE = FamilyPocketWatch_Extension;
+				INFOPLIST_FILE = FamilyPocketWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = Ivan.Sapozhnik.FamilyPocket.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		FFA47C801EC8F47F00465E11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 54HW5825ZV;
+				IBSC_MODULE = FamilyPocketWatch_Extension;
+				INFOPLIST_FILE = FamilyPocketWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = Ivan.Sapozhnik.FamilyPocket.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		FFA47C811EC8F47F00465E11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 54HW5825ZV;
+				INFOPLIST_FILE = "FamilyPocketWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Ivan.Sapozhnik.FamilyPocket.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		FFA47C821EC8F47F00465E11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 54HW5825ZV;
+				INFOPLIST_FILE = "FamilyPocketWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Ivan.Sapozhnik.FamilyPocket.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
 		FFB47E521EA94B2A00B36507 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -859,6 +1126,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FFA47C831EC8F47F00465E11 /* Build configuration list for PBXNativeTarget "FamilyPocketWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFA47C811EC8F47F00465E11 /* Debug */,
+				FFA47C821EC8F47F00465E11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FFA47C851EC8F47F00465E11 /* Build configuration list for PBXNativeTarget "FamilyPocketWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFA47C7F1EC8F47F00465E11 /* Debug */,
+				FFA47C801EC8F47F00465E11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		FFB47E271EA94B2A00B36507 /* Build configuration list for PBXProject "FamilyPocket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

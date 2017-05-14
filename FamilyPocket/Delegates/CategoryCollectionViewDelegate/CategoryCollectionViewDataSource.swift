@@ -33,7 +33,7 @@ class CategoryCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         if let cell = c as? CategoryCollectionViewCell {
 
             if indexPath.row == items.count {
-                cell.bind(categoryName: NSLocalizedString("Add new +", comment:""), color: .mainGreenColor(), icon: nil)
+                cell.bind(categoryName: NSLocalizedString("Add new", comment:""), color: .mainGreenColor(), icon: UIImage(named: "Plus-80.png"))
                 
             } else {
                 let category = items[indexPath.row]
