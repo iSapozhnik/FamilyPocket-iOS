@@ -12,7 +12,7 @@ import RealmSwift
 class CategoryManager: Persistable {
     typealias Object = Category
     
-    func allObjects(withCompletion completion: ([Object]?) -> ()) {
+    func allObjects(withCompletion completion: ([Category]?) -> ()) {
         
         let realm = try! Realm()
         

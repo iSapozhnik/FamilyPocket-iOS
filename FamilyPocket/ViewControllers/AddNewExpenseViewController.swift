@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SegmentedProgressView
 
 public protocol LayoutAttributesAnimator {
     func animate(collectionView: UICollectionView, attributes: AnimatedCollectionViewLayoutAttributes)
@@ -20,7 +19,6 @@ class AddNewExpenseViewController: UIViewController {
     @IBOutlet weak var currencyTextfield: CurrencyTextfield!
     @IBOutlet weak var overlayButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var segmentedProgress: SegmentedProgressView!
     
     var dataSource: CategoryCollectionViewDataSource!
     var delegate: CategoryCollectionViewDelegate!
@@ -28,6 +26,8 @@ class AddNewExpenseViewController: UIViewController {
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
     var direction: UICollectionViewScrollDirection = .horizontal
     let cellIdentifier = "CategoryCollectionViewCell"
+    
+    var kbUtility: KeyboardUtility!
     
     @IBOutlet weak var saveButtonBottomConstraint: NSLayoutConstraint!
     
@@ -65,21 +65,19 @@ class AddNewExpenseViewController: UIViewController {
             }
         }
         
-        NotificationCenter.default.addObserver(self, selector: #selector(AddNewExpenseViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(AddNewExpenseViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        kbUtility = KeyboardUtility { (height: CGFloat, duration :TimeInterval) in
+            
+            UIView.animate(withDuration: duration, animations: {
+                self.saveButtonBottomConstraint.constant = height
+                self.overlayButton.alpha = height > 0 ? 1.0 : 0.0
+                self.view.layoutIfNeeded()
+            })
+        }
         
         saveButton.isEnabled = false
         currencyTextfield.valueHandler = { isValid in
             self.saveButton.isEnabled = isValid
         }
-        
-        var items: [ProgressItem] = []
-        for _ in 0...4 {
-            items.append(ProgressItem(withDuration: 3))
-        }
-        
-        segmentedProgress.itemSpace = 3.0
-        segmentedProgress.items = items
         
     }
     
@@ -109,26 +107,5 @@ class AddNewExpenseViewController: UIViewController {
         view.endEditing(true)
     }
 
-    func keyboardWillShow(notification: NSNotification) {
-        if
-            let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
-            let duration = (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval) {
-            UIView.animate(withDuration: duration, animations: { 
-                self.saveButtonBottomConstraint.constant = keyboardSize.height
-                self.overlayButton.alpha = 1.0
-                self.view.layoutIfNeeded()
-            })
-        }
-    }
     
-    func keyboardWillHide(notification: NSNotification) {
-        if
-            let duration = (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval) {
-            UIView.animate(withDuration: duration, animations: {
-                self.saveButtonBottomConstraint.constant = 0
-                self.overlayButton.alpha = 0.0
-                self.view.layoutIfNeeded()
-            })
-        }
-    }
 }
