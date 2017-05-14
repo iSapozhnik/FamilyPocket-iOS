@@ -24,7 +24,7 @@ class CategoryCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return items.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -32,15 +32,20 @@ class CategoryCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         
         if let cell = c as? CategoryCollectionViewCell {
 
-            let category = items[indexPath.row]
-            let color: UIColor
-            if let colorString = category.color {
-                color = colorString.hexColor
+            if indexPath.row == items.count {
+                cell.bind(categoryName: NSLocalizedString("Add new +", comment:""), color: .mainGreenColor(), icon: nil)
+                
             } else {
-                color = .gray
+                let category = items[indexPath.row]
+                let color: UIColor
+                if let colorString = category.color {
+                    color = colorString.hexColor
+                } else {
+                    color = .gray
+                }
+                cell.bind(categoryName: category.name, color: color, icon: UIImage(named: category.iconName ?? ""))
+                cell.animate()
             }
-            cell.bind(categoryName: category.name, color: color, icon: UIImage(named: category.iconName ?? ""))
-            cell.animate()
         }
         
         return c

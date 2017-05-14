@@ -12,7 +12,7 @@ public protocol LayoutAttributesAnimator {
     func animate(collectionView: UICollectionView, attributes: AnimatedCollectionViewLayoutAttributes)
 }
 
-class AddNewExpenseViewController: UIViewController {
+class AddNewExpenseViewController: UIViewController, CategoryDelegate {
 
     @IBOutlet weak var titleLabel: ALabel!
     @IBOutlet weak var saveButton: AButton!
@@ -53,7 +53,8 @@ class AddNewExpenseViewController: UIViewController {
         print("AddNewExpenseViewController viewDidLoad")
 
         dataSource = CategoryCollectionViewDataSource(withCellIdentifier: cellIdentifier, items: nil, collectionView: collectionView)
-        delegate = CategoryCollectionViewDelegate()
+        delegate = CategoryCollectionViewDelegate(withController: self)
+        
         collectionView.dataSource = dataSource
         collectionView.delegate = delegate
         
@@ -62,6 +63,7 @@ class AddNewExpenseViewController: UIViewController {
         CategoryManager().allObjects { (categories) in
             if let categories = categories {
                 self.dataSource.items = categories
+                self.delegate.items = categories
             }
         }
         
@@ -107,5 +109,11 @@ class AddNewExpenseViewController: UIViewController {
         view.endEditing(true)
     }
 
+    func wantAddNewCategory() {
+        
+        let paletteVC = ColorPaletteTableViewController()
+        present(paletteVC, animated: true, completion: nil)
+        
+    }
     
 }

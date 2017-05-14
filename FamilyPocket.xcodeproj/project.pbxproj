@@ -28,6 +28,11 @@
 		FFA47C351EC8A78600465E11 /* CategoryCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C341EC8A78600465E11 /* CategoryCollectionViewDelegate.swift */; };
 		FFA47C391EC8A94700465E11 /* CategoryCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C381EC8A94700465E11 /* CategoryCollectionViewDataSource.swift */; };
 		FFA47C3C1EC8BB0E00465E11 /* KeyboardUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C3B1EC8BB0E00465E11 /* KeyboardUtility.swift */; };
+		FFA47C3E1EC8CB6100465E11 /* UIColor+FamilyPocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C3D1EC8CB6100465E11 /* UIColor+FamilyPocket.swift */; };
+		FFA47C401EC8E30E00465E11 /* FlatUIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C3F1EC8E30E00465E11 /* FlatUIColors.swift */; };
+		FFA47C421EC8E54000465E11 /* ColorPaletteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C411EC8E54000465E11 /* ColorPaletteTableViewController.swift */; };
+		FFA47C451EC8E59B00465E11 /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C431EC8E59B00465E11 /* ColorTableViewCell.swift */; };
+		FFA47C461EC8E59B00465E11 /* ColorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFA47C441EC8E59B00465E11 /* ColorTableViewCell.xib */; };
 		FFA7D7561EC77FC8009DF4C3 /* AButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7D7541EC77FC8009DF4C3 /* AButton.swift */; };
 		FFA7D7571EC77FC8009DF4C3 /* ALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7D7551EC77FC8009DF4C3 /* ALabel.swift */; };
 		FFA7D7591EC77FDE009DF4C3 /* CurrencyTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7D7581EC77FDE009DF4C3 /* CurrencyTextfield.swift */; };
@@ -86,6 +91,11 @@
 		FFA47C341EC8A78600465E11 /* CategoryCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		FFA47C381EC8A94700465E11 /* CategoryCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		FFA47C3B1EC8BB0E00465E11 /* KeyboardUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardUtility.swift; sourceTree = "<group>"; };
+		FFA47C3D1EC8CB6100465E11 /* UIColor+FamilyPocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+FamilyPocket.swift"; sourceTree = "<group>"; };
+		FFA47C3F1EC8E30E00465E11 /* FlatUIColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatUIColors.swift; sourceTree = "<group>"; };
+		FFA47C411EC8E54000465E11 /* ColorPaletteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPaletteTableViewController.swift; sourceTree = "<group>"; };
+		FFA47C431EC8E59B00465E11 /* ColorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
+		FFA47C441EC8E59B00465E11 /* ColorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorTableViewCell.xib; sourceTree = "<group>"; };
 		FFA7D7541EC77FC8009DF4C3 /* AButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AButton.swift; sourceTree = "<group>"; };
 		FFA7D7551EC77FC8009DF4C3 /* ALabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALabel.swift; sourceTree = "<group>"; };
 		FFA7D7581EC77FDE009DF4C3 /* CurrencyTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyTextfield.swift; sourceTree = "<group>"; };
@@ -166,6 +176,7 @@
 				FF05CB5A1EC87EE000192647 /* PrivateTransitionContext.swift */,
 				FF05CB5B1EC87EE000192647 /* SettingsViewController.swift */,
 				FF05CB5C1EC87EE000192647 /* SettingsViewController.xib */,
+				FFA47C411EC8E54000465E11 /* ColorPaletteTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -234,6 +245,7 @@
 		FFA47C3A1EC8BAF900465E11 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				FFA47C3F1EC8E30E00465E11 /* FlatUIColors.swift */,
 				FFA47C3B1EC8BB0E00465E11 /* KeyboardUtility.swift */,
 			);
 			path = Utility;
@@ -245,15 +257,18 @@
 				FFA7D75A1EC790A3009DF4C3 /* CollectionView */,
 				FFA7D7531EC77FC8009DF4C3 /* Animatable */,
 				FFA7D7581EC77FDE009DF4C3 /* CurrencyTextfield.swift */,
+				FFA47C431EC8E59B00465E11 /* ColorTableViewCell.swift */,
+				FFA47C441EC8E59B00465E11 /* ColorTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		FFA7D7501EC77C07009DF4C3 /* Delegates */ = {
+		FFA7D7501EC77C07009DF4C3 /* DelegatesDataSources */ = {
 			isa = PBXGroup;
 			children = (
 				FFA47C331EC8A77600465E11 /* CategoryCollectionViewDelegateDataSource */,
 			);
+			name = DelegatesDataSources;
 			path = Delegates;
 			sourceTree = "<group>";
 		};
@@ -307,7 +322,7 @@
 				FF05CB531EC87EE000192647 /* ViewControllers */,
 				FFA7D74B1EC76446009DF4C3 /* Views */,
 				FFA47C211EC88FC000465E11 /* Data */,
-				FFA7D7501EC77C07009DF4C3 /* Delegates */,
+				FFA7D7501EC77C07009DF4C3 /* DelegatesDataSources */,
 				FFA47C3A1EC8BAF900465E11 /* Utility */,
 				FFB47E671EA955C300B36507 /* Extensions */,
 				FFB47E361EA94B2A00B36507 /* Assets.xcassets */,
@@ -341,6 +356,7 @@
 				FFA47C311EC8A6F000465E11 /* UIColor+LighterDarker.swift */,
 				FFB47E681EA955D700B36507 /* NSObject+ClassName.swift */,
 				FFA47C2D1EC8A69D00465E11 /* String+UIColor.swift */,
+				FFA47C3D1EC8CB6100465E11 /* UIColor+FamilyPocket.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -460,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFA47C201EC88F9600465E11 /* categories.json in Resources */,
+				FFA47C461EC8E59B00465E11 /* ColorTableViewCell.xib in Resources */,
 				FFB47E3A1EA94B2A00B36507 /* LaunchScreen.storyboard in Resources */,
 				FF05CB651EC87EE000192647 /* SettingsViewController.xib in Resources */,
 				FFA7D7671EC7948C009DF4C3 /* CategoryCollectionViewCell.xib in Resources */,
@@ -588,6 +605,9 @@
 				FF05CB5D1EC87EE000192647 /* AddNewExpenseViewController.swift in Sources */,
 				FFA47C2E1EC8A69D00465E11 /* String+UIColor.swift in Sources */,
 				FFA7D7601EC790A3009DF4C3 /* AnimatedCollectionViewLayout.swift in Sources */,
+				FFA47C401EC8E30E00465E11 /* FlatUIColors.swift in Sources */,
+				FFA47C3E1EC8CB6100465E11 /* UIColor+FamilyPocket.swift in Sources */,
+				FFA47C421EC8E54000465E11 /* ColorPaletteTableViewController.swift in Sources */,
 				FFA47C321EC8A6F000465E11 /* UIColor+LighterDarker.swift in Sources */,
 				FF05CB601EC87EE000192647 /* ExpenseSummaryViewController.swift in Sources */,
 				FF05CB621EC87EE000192647 /* HostingViewController.swift in Sources */,
@@ -603,6 +623,7 @@
 				FFA7D7591EC77FDE009DF4C3 /* CurrencyTextfield.swift in Sources */,
 				FFA47C391EC8A94700465E11 /* CategoryCollectionViewDataSource.swift in Sources */,
 				FFA7D7571EC77FC8009DF4C3 /* ALabel.swift in Sources */,
+				FFA47C451EC8E59B00465E11 /* ColorTableViewCell.swift in Sources */,
 				FF05CB5F1EC87EE000192647 /* Animator.swift in Sources */,
 				FFA47C351EC8A78600465E11 /* CategoryCollectionViewDelegate.swift in Sources */,
 				FFA7D7661EC7948C009DF4C3 /* CategoryCollectionViewCell.swift in Sources */,

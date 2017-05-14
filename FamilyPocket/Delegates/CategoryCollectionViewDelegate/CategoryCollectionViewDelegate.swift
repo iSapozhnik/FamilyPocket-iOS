@@ -8,7 +8,27 @@
 
 import UIKit
 
+protocol CategoryDelegate: NSObjectProtocol {
+    func wantAddNewCategory()
+}
+
 class CategoryCollectionViewDelegate: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    var items: [Category] = []
+    weak var controller: CategoryDelegate!
+    
+    init(withController controller: CategoryDelegate) {
+        super.init()
+        self.controller = controller
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if indexPath.row == items.count {
+            controller.wantAddNewCategory()
+        }
+        
+    }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
