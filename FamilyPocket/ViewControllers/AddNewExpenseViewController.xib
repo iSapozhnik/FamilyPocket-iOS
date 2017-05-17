@@ -112,11 +112,19 @@
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOL-96" translatesAutoresizingMaskIntoConstraints="NO" id="gky-Yp-fO4">
+                    <rect key="frame" x="320" y="163.5" width="27" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="27" id="FQu-aY-NWQ"/>
+                        <constraint firstAttribute="height" constant="27" id="zDJ-ph-0NN"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.058823529411764705" green="0.49803921568627452" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="17g-LD-d36" secondAttribute="trailing" id="6eB-9j-rCJ"/>
                 <constraint firstItem="tPm-8r-Fes" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="9Qc-6x-gxe"/>
+                <constraint firstItem="gky-Yp-fO4" firstAttribute="centerY" secondItem="4nT-p7-10k" secondAttribute="centerY" id="9jq-hF-xgu"/>
                 <constraint firstAttribute="trailing" secondItem="Yg5-jT-4nH" secondAttribute="trailing" id="AeE-Jq-OJi"/>
                 <constraint firstItem="0We-3e-KLe" firstAttribute="top" secondItem="17g-LD-d36" secondAttribute="bottom" constant="8" id="BXg-Nw-a8x"/>
                 <constraint firstItem="Ptz-4Q-jxA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="BaF-FN-iTG"/>
@@ -129,6 +137,7 @@
                 <constraint firstAttribute="trailing" secondItem="CyW-ZP-1vb" secondAttribute="trailing" id="dAZ-ps-6Ms"/>
                 <constraint firstItem="Yg5-jT-4nH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eiL-uc-RXk"/>
                 <constraint firstAttribute="trailing" secondItem="tPm-8r-Fes" secondAttribute="trailing" constant="50" id="ffO-Sq-UNx"/>
+                <constraint firstItem="gky-Yp-fO4" firstAttribute="trailing" secondItem="4nT-p7-10k" secondAttribute="trailing" constant="-8" id="iVk-xW-t9W"/>
                 <constraint firstItem="Yg5-jT-4nH" firstAttribute="top" secondItem="0We-3e-KLe" secondAttribute="bottom" constant="8" id="k5a-m4-RDj"/>
                 <constraint firstAttribute="bottom" secondItem="Yg5-jT-4nH" secondAttribute="bottom" id="l1m-yZ-jPc"/>
                 <constraint firstItem="Ptz-4Q-jxA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="rFN-np-9Tu"/>
@@ -143,4 +152,7 @@
         </view>
         <customObject id="Jdz-mD-3ur" customClass="TextfieldDelegate" customModule="FamilyPocket" customModuleProvider="target"/>
     </objects>
+    <resources>
+        <image name="LOL-96" width="32" height="32"/>
+    </resources>
 </document>

@@ -76,6 +76,9 @@ class ExpenseManager: Persistable {
         
         let realm = try! Realm()
         try! realm.write {
+            if let expense = object as? Expense {
+                expense.category.popularity += 1
+            }
             realm.add(object)
         }
         

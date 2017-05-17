@@ -54,21 +54,12 @@ class ExpenseSummaryViewController: UIViewController {
         expenseManager = ExpenseManager()
         expenseManager.allObjects { [weak self] (expenses) in
             if let expenses = expenses {
-                print("Expenses: \(expenses)")
+                
+                let expenses = Array(expenses)
+                let sum = expenses.filter({$0.category.name == "Test"}).map({$0.value}).reduce(0, +)
+                print("sum: \(sum)")
                 self?.items = expenses
             }
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
