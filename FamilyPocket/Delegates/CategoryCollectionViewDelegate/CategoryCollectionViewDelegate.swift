@@ -11,6 +11,7 @@ import UIKit
 protocol CategoryDelegate: NSObjectProtocol {
     func wantAddNewCategory()
     func didSelect(categoryItem category: Category?)
+    func willDisplay(categoryItem category: Category?)
 }
 
 class CategoryCollectionViewDelegate: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -32,15 +33,18 @@ class CategoryCollectionViewDelegate: NSObject, UICollectionViewDelegate, UIColl
         
         if indexPath.row == items.count {
             controller.wantAddNewCategory()
+        } else {
+            let category = items[indexPath.row]
+            controller.didSelect(categoryItem: category)
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if indexPath.row != items.count {
             let category = items[indexPath.row]
-            controller.didSelect(categoryItem: category)
+            controller.willDisplay(categoryItem: category)
         } else {
-            controller.didSelect(categoryItem: nil)
+            controller.willDisplay(categoryItem: nil)
         }
     }
     

@@ -16,12 +16,18 @@ class Category: Object {
 //  override static func ignoredProperties() -> [String] {
 //    return []
 //  }
-    
+
     dynamic var name: String!
     dynamic var dateOfCreation: Date!
     dynamic var popularity: Int = 0
     dynamic var color: String?
     dynamic var iconName: String?
+    dynamic var id: String = UUID().uuidString
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
 }
 
 class IncomeCategory: Category {}

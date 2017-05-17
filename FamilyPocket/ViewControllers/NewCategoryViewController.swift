@@ -10,21 +10,22 @@ import UIKit
 
 class NewCategoryViewController: BaseViewController, UIScrollViewDelegate {
     
-    typealias NewCategoryHandler = (_ sender: UIViewController, _ category: Category?) -> ()
+    typealias CategoryHandler = (_ sender: UIViewController, _ category: Category?) -> ()
 
     @IBOutlet weak var bottomContainerConstraint: NSLayoutConstraint!
     @IBOutlet weak var colorButton: UIButton!
     @IBOutlet weak var titleLabel: ALabel!
     @IBOutlet weak var categoryNameTextfield: PaddingTextfield!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var saveButton: UIButton!
     
     var categoryColorName: String?
     var categoryColor: UIColor?
     
-    var completion: NewCategoryHandler?
+    var completion: CategoryHandler?
     var kbUtility: KeyboardUtility!
     
-    init(withCompletion completion: NewCategoryHandler?) {
+    init(withCompletion completion: CategoryHandler?) {
         super.init(nibName: "NewCategoryViewController", bundle: nil)
         self.completion = completion
     }
@@ -93,9 +94,13 @@ class NewCategoryViewController: BaseViewController, UIScrollViewDelegate {
         newCategory.dateOfCreation = Date()
         newCategory.iconName = "Edit User Male-80.png" //default icon
         
-        CategoryManager().add(object: newCategory)
-        
-        completion?(self, newCategory)
+        let categoryManager = CategoryManager()
+        if categoryManager.canAdd(object: newCategory) {
+            CategoryManager().add(object: newCategory)
+            completion?(self, newCategory)
+        } else {
+            print("Object already exists")
+        }
     }
     
     @IBAction func cancel(_ sender: Any) {
@@ -104,7 +109,7 @@ class NewCategoryViewController: BaseViewController, UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y <= -50 {
-            dismiss(animated: true, completion: nil)
+            completion?(self, nil)
         }
     }
 }

@@ -26,6 +26,18 @@ class CategoryManager: Persistable {
         completion(Array(categories))
     }
     
+    func canAdd(object: Object) -> Bool {
+        
+        if let category = object as? Category {
+            let realm = try! Realm()
+            let predicate = NSPredicate(format: "name = %@", category.name!)
+            let categories = realm.objects(Category.self).filter(predicate)
+            return categories.count == 0
+        } else {
+            return true
+        }
+    }
+    
     func add(object: Object) {
         
         let realm = try! Realm()
@@ -37,6 +49,14 @@ class CategoryManager: Persistable {
     
     func delete(object: Object) {
         
+    }
+    
+    func update(object: Category, name: String) {
+        let realm = try! Realm()
+        try! realm.write {
+            object.name = name
+            realm.add(object, update: true)
+        }
     }
 }
 

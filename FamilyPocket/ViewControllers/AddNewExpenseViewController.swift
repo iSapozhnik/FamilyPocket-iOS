@@ -199,6 +199,28 @@ class AddNewExpenseViewController: BaseViewController, CategoryDelegate {
     
     func didSelect(categoryItem category: Category?) {
     
+        let editCategory = EditCategoryViewController(withCategory: selectedCategory) { (sender, category) in
+            self.animateOnAppearence = false
+            if let category = category {
+                self.selectedCategory = category
+                self.updateCategories(forSegmen: self.expenseSegmentedControl.selectedSegmentIndex)
+                
+                guard
+                    let categories = self.categories,
+                    let index = categories.index(of: category) else { return }
+                
+                let indexPath = IndexPath(row: index, section: 0)
+                self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
+            }
+            sender.dismiss(animated: true, completion: nil)
+        }
+        let navController = UINavigationController(rootViewController: editCategory)
+        navController.setNavigationBarHidden(true, animated: false)
+        
+        present(navController, animated: true, completion: nil)
+    }
+    
+    func willDisplay(categoryItem category: Category?) {
         selectedCategory = category
     }
     
