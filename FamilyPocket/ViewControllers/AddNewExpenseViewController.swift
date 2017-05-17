@@ -172,7 +172,7 @@ class AddNewExpenseViewController: BaseViewController, CategoryDelegate {
     
     func wantAddNewCategory() {
         
-        let newCategoryVC = NewCategoryViewController { (sender, category) in
+        let newCategoryVC = NewCategoryViewController { (sender, category, isCanceled) in
             
             self.animateOnAppearence = false
             
@@ -184,8 +184,10 @@ class AddNewExpenseViewController: BaseViewController, CategoryDelegate {
                     let categories = self.categories,
                     let index = categories.index(of: category) else { return }
                 
-                let indexPath = IndexPath(row: index, section: 0)
-                self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
+                if !isCanceled {
+                    let indexPath = IndexPath(row: index, section: 0)
+                    self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
+                }
             }
             
             sender.dismiss(animated: true, completion: nil)
@@ -199,21 +201,36 @@ class AddNewExpenseViewController: BaseViewController, CategoryDelegate {
     
     func didSelect(categoryItem category: Category?) {
     
-        let editCategory = EditCategoryViewController(withCategory: selectedCategory) { (sender, category) in
+        let editCategory = EditCategoryViewController(withCategory: selectedCategory) { (sender, category, isCanceled) in
             self.animateOnAppearence = false
+            
             if let category = category {
-                self.selectedCategory = category
+                
                 self.updateCategories(forSegmen: self.expenseSegmentedControl.selectedSegmentIndex)
                 
+                self.selectedCategory = category
+
                 guard
                     let categories = self.categories,
                     let index = categories.index(of: category) else { return }
                 
-                let indexPath = IndexPath(row: index, section: 0)
-                self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
+                if !isCanceled {
+                    let indexPath = IndexPath(row: index, section: 0)
+                    self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
+                }
+            } else {
+                
+                // This will be executed when category was removed
+                
+                if !isCanceled {
+                    let indexPath = IndexPath(row: self.categories?.count ?? 0, section: 0)
+                    self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
+                }
+                
             }
             sender.dismiss(animated: true, completion: nil)
         }
+        
         let navController = UINavigationController(rootViewController: editCategory)
         navController.setNavigationBarHidden(true, animated: false)
         

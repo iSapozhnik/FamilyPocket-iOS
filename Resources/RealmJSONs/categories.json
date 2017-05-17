@@ -40,7 +40,7 @@
       "dateOfCreation": "2014-06-25",
       "popularity": 112,
       "color": "#487D37",
-      "iconName": "Food-80.png"
+      "iconName": "Ingredients-80.png"
     },
     {
       "name": "Transport",
@@ -48,6 +48,13 @@
       "popularity": 10,
       "color": "#42b3f4",
       "iconName": "Shuttle-80.png"
-    }
+    },
+     {
+     "name": "Restaurants",
+     "dateOfCreation": "2014-06-25",
+     "popularity": 10,
+     "color": "#42b3f4",
+     "iconName": "Food-80.png"
+     }
   ]
 }

@@ -14,6 +14,8 @@
                 <outlet property="bottomContainerConstraint" destination="k9s-zP-6fk" id="uHc-gZ-yee"/>
                 <outlet property="categoryNameTextfield" destination="14m-ji-NzK" id="uic-AW-8Nv"/>
                 <outlet property="colorButton" destination="Zg1-w8-TV1" id="2BF-4K-WeD"/>
+                <outlet property="deleteButton" destination="Iue-kS-TaU" id="jUR-PL-8yB"/>
+                <outlet property="iconView" destination="OqI-cb-8Uh" id="4j1-yx-7DZ"/>
                 <outlet property="saveButton" destination="6ZC-p5-emK" id="6Kw-EC-goY"/>
                 <outlet property="scrollView" destination="5yU-gT-jUz" id="DSu-1v-t7E"/>
                 <outlet property="titleLabel" destination="aEc-0S-Yga" id="7Ty-aM-Tyl"/>
@@ -25,7 +27,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="5yU-gT-jUz">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="5yU-gT-jUz">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nbo-Ci-0Vs">
@@ -38,6 +40,10 @@
                                         <constraint firstAttribute="width" constant="50" id="YNx-yy-D4X"/>
                                         <constraint firstAttribute="width" secondItem="Zg1-w8-TV1" secondAttribute="height" multiplier="1:1" id="veP-Jq-tLA"/>
                                     </constraints>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                    <state key="normal" title="Color">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
                                     <connections>
                                         <action selector="pickeColor:" destination="-1" eventType="touchUpInside" id="OXs-Bn-ZH3"/>
                                     </connections>
@@ -117,12 +123,41 @@
                                         <constraint firstAttribute="trailing" secondItem="6ZC-p5-emK" secondAttribute="trailing" id="zc7-sU-067"/>
                                     </constraints>
                                 </view>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iue-kS-TaU">
+                                    <rect key="frame" x="40" y="563" width="295" height="44"/>
+                                    <color key="backgroundColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="ADZ-Tj-bo7"/>
+                                    </constraints>
+                                    <state key="normal" title="Delete">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="22"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="deleteCategory:" destination="-1" eventType="touchUpInside" id="o2j-xr-luQ"/>
+                                    </connections>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OqI-cb-8Uh">
+                                    <rect key="frame" x="300" y="120" width="27" height="27"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="27" id="Tiv-of-rSu"/>
+                                        <constraint firstAttribute="height" constant="27" id="hlJ-vQ-nIP"/>
+                                    </constraints>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstItem="Iue-kS-TaU" firstAttribute="leading" secondItem="Nbo-Ci-0Vs" secondAttribute="leading" constant="40" id="23I-iC-Oao"/>
+                                <constraint firstItem="OqI-cb-8Uh" firstAttribute="centerY" secondItem="14m-ji-NzK" secondAttribute="centerY" id="3xV-NG-1TX"/>
                                 <constraint firstItem="14m-ji-NzK" firstAttribute="centerY" secondItem="Zg1-w8-TV1" secondAttribute="centerY" id="6wZ-Ie-IAs"/>
                                 <constraint firstItem="4vP-aE-T2I" firstAttribute="leading" secondItem="Nbo-Ci-0Vs" secondAttribute="leading" id="B0c-ml-ggd"/>
+                                <constraint firstAttribute="trailing" secondItem="Iue-kS-TaU" secondAttribute="trailing" constant="40" id="EMB-0a-HXS"/>
                                 <constraint firstItem="14m-ji-NzK" firstAttribute="leading" secondItem="Zg1-w8-TV1" secondAttribute="trailing" constant="20" id="Hmu-Mm-o2q"/>
+                                <constraint firstAttribute="bottom" secondItem="Iue-kS-TaU" secondAttribute="bottom" constant="60" id="Qj0-jq-BFI"/>
                                 <constraint firstAttribute="trailing" secondItem="4vP-aE-T2I" secondAttribute="trailing" id="SZ6-3V-6Jp"/>
                                 <constraint firstItem="aEc-0S-Yga" firstAttribute="top" secondItem="Nbo-Ci-0Vs" secondAttribute="top" constant="40" id="X1G-Ov-R4K"/>
                                 <constraint firstItem="aEc-0S-Yga" firstAttribute="leading" secondItem="Nbo-Ci-0Vs" secondAttribute="leading" constant="40" id="cAN-g2-NZO"/>
@@ -131,6 +166,7 @@
                                 <constraint firstItem="Zg1-w8-TV1" firstAttribute="leading" secondItem="Nbo-Ci-0Vs" secondAttribute="leading" constant="40" id="qxn-8h-ToD"/>
                                 <constraint firstAttribute="trailing" secondItem="aEc-0S-Yga" secondAttribute="trailing" constant="40" id="ugz-1V-efP"/>
                                 <constraint firstItem="Zg1-w8-TV1" firstAttribute="top" secondItem="Nbo-Ci-0Vs" secondAttribute="top" constant="108.5" id="xeN-hP-RNH"/>
+                                <constraint firstItem="OqI-cb-8Uh" firstAttribute="trailing" secondItem="14m-ji-NzK" secondAttribute="trailing" constant="-8" id="yUT-ti-qM2"/>
                             </constraints>
                         </view>
                     </subviews>

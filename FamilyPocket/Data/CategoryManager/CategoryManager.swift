@@ -49,12 +49,18 @@ class CategoryManager: Persistable {
     
     func delete(object: Object) {
         
+        let realm = try! Realm()
+        
+        try! realm.write {
+            realm.delete(object)
+        }
     }
     
-    func update(object: Category, name: String) {
+    func update(object: Category, name: String, colorString: String) {
         let realm = try! Realm()
         try! realm.write {
             object.name = name
+            object.color = colorString
             realm.add(object, update: true)
         }
     }

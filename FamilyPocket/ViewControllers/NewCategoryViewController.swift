@@ -10,7 +10,7 @@ import UIKit
 
 class NewCategoryViewController: BaseViewController, UIScrollViewDelegate {
     
-    typealias CategoryHandler = (_ sender: UIViewController, _ category: Category?) -> ()
+    typealias CategoryHandler = (_ sender: UIViewController, _ category: Category?, _ canceled: Bool) -> ()
 
     @IBOutlet weak var bottomContainerConstraint: NSLayoutConstraint!
     @IBOutlet weak var colorButton: UIButton!
@@ -18,6 +18,8 @@ class NewCategoryViewController: BaseViewController, UIScrollViewDelegate {
     @IBOutlet weak var categoryNameTextfield: PaddingTextfield!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var iconView: UIImageView!
     
     var categoryColorName: String?
     var categoryColor: UIColor?
@@ -32,6 +34,10 @@ class NewCategoryViewController: BaseViewController, UIScrollViewDelegate {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     override func viewDidLoad() {
@@ -86,7 +92,7 @@ class NewCategoryViewController: BaseViewController, UIScrollViewDelegate {
         
         guard
             let categoryColorName = self.categoryColorName,
-            let categoryName = self.categoryNameTextfield.text else { return }
+            let categoryName = self.categoryNameTextfield.text, categoryName.characters.count > 0 else { return }
         
         let newCategory = Category()
         newCategory.color = categoryColorName
@@ -97,19 +103,23 @@ class NewCategoryViewController: BaseViewController, UIScrollViewDelegate {
         let categoryManager = CategoryManager()
         if categoryManager.canAdd(object: newCategory) {
             CategoryManager().add(object: newCategory)
-            completion?(self, newCategory)
+            completion?(self, newCategory, false)
         } else {
             print("Object already exists")
         }
     }
     
     @IBAction func cancel(_ sender: Any) {
-        completion?(self, nil)
+        completion?(self, nil, true)
+    }
+    
+    @IBAction func deleteCategory(_ sender: Any) {
+        // Overrides in EditCategoryViewController
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y <= -50 {
-            completion?(self, nil)
+            completion?(self, nil, true)
         }
     }
 }
