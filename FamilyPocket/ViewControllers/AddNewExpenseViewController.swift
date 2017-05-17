@@ -12,7 +12,7 @@ public protocol LayoutAttributesAnimator {
     func animate(collectionView: UICollectionView, attributes: AnimatedCollectionViewLayoutAttributes)
 }
 
-class AddNewExpenseViewController: UIViewController, CategoryDelegate {
+class AddNewExpenseViewController: BaseViewController, CategoryDelegate {
 
     @IBOutlet weak var titleLabel: ALabel!
     @IBOutlet weak var saveButton: AButton!
@@ -25,6 +25,7 @@ class AddNewExpenseViewController: UIViewController, CategoryDelegate {
     var delegate: CategoryCollectionViewDelegate!
     
     var selectedCategory: Category?
+    var categories: [Category]?
     
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
     var direction: UICollectionViewScrollDirection = .horizontal
@@ -83,10 +84,7 @@ class AddNewExpenseViewController: UIViewController, CategoryDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        titleLabel.animate()
-        saveButton.animate()
-        
+
         collectionView.layoutIfNeeded()
         
         animator = (CubeAttributesAnimator(), true, 1, 1)
@@ -94,6 +92,11 @@ class AddNewExpenseViewController: UIViewController, CategoryDelegate {
             layout.scrollDirection = direction
             layout.animator = animator?.0
         }
+    }
+    
+    override func animate() {
+        titleLabel.animate()
+        saveButton.animate()
     }
     
     @IBAction func onCategoryTypeChange(_ sender: UISegmentedControl) {
@@ -148,6 +151,7 @@ class AddNewExpenseViewController: UIViewController, CategoryDelegate {
     private func updateExpenseCategories() {
         CategoryManager().allObjects { (categories) in
             if let categories = categories {
+                self.categories = categories
                 self.dataSource.items = categories
                 self.delegate.items = categories
             }
@@ -157,6 +161,7 @@ class AddNewExpenseViewController: UIViewController, CategoryDelegate {
     private func updateIncomeCategories() {
         IncomeCategoryManager().allObjects { (categories) in
             if let categories = categories {
+                self.categories = categories
                 self.dataSource.items = categories
                 self.delegate.items = categories
             }
@@ -167,15 +172,34 @@ class AddNewExpenseViewController: UIViewController, CategoryDelegate {
     
     func wantAddNewCategory() {
         
-        let paletteVC = ColorPaletteTableViewController()
-        present(paletteVC, animated: true, completion: nil)
+        let newCategoryVC = NewCategoryViewController { (sender, category) in
+            
+            self.animateOnAppearence = false
+            
+            if let category = category {
+                self.selectedCategory = category
+                self.updateCategories(forSegmen: self.expenseSegmentedControl.selectedSegmentIndex)
+                
+                guard
+                    let categories = self.categories,
+                    let index = categories.index(of: category) else { return }
+                
+                let indexPath = IndexPath(row: index, section: 0)
+                self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
+            }
+            
+            sender.dismiss(animated: true, completion: nil)
+        }
         
+        let navController = UINavigationController(rootViewController: newCategoryVC)
+        navController.setNavigationBarHidden(true, animated: false)
+        
+        present(navController, animated: true, completion: nil)
     }
     
     func didSelect(categoryItem category: Category?) {
-        
-        selectedCategory = category
     
+        selectedCategory = category
     }
     
 }

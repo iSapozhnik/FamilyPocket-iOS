@@ -29,6 +29,9 @@
 		FF834F571ECC97A1000DE055 /* DatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F561ECC97A1000DE055 /* DatePresenter.swift */; };
 		FF834F591ECC9B27000DE055 /* ExpenseSummaryViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F581ECC9B27000DE055 /* ExpenseSummaryViewController+Delegate.swift */; };
 		FF834F5B1ECC9F69000DE055 /* Income.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F5A1ECC9F69000DE055 /* Income.swift */; };
+		FF834F5E1ECCAAE0000DE055 /* NewCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F5C1ECCAAE0000DE055 /* NewCategoryViewController.swift */; };
+		FF834F5F1ECCAAE0000DE055 /* NewCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF834F5D1ECCAAE0000DE055 /* NewCategoryViewController.xib */; };
+		FF834F611ECCC12B000DE055 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F601ECCC12B000DE055 /* BaseViewController.swift */; };
 		FFA47C201EC88F9600465E11 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = FFA47C1F1EC88F9600465E11 /* categories.json */; };
 		FFA47C251EC88FEF00465E11 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C241EC88FEF00465E11 /* Category.swift */; };
 		FFA47C271EC8912000465E11 /* RealmDataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C261EC8912000465E11 /* RealmDataImporter.swift */; };
@@ -150,6 +153,9 @@
 		FF834F561ECC97A1000DE055 /* DatePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePresenter.swift; sourceTree = "<group>"; };
 		FF834F581ECC9B27000DE055 /* ExpenseSummaryViewController+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExpenseSummaryViewController+Delegate.swift"; sourceTree = "<group>"; };
 		FF834F5A1ECC9F69000DE055 /* Income.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Income.swift; sourceTree = "<group>"; };
+		FF834F5C1ECCAAE0000DE055 /* NewCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCategoryViewController.swift; sourceTree = "<group>"; };
+		FF834F5D1ECCAAE0000DE055 /* NewCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewCategoryViewController.xib; sourceTree = "<group>"; };
+		FF834F601ECCC12B000DE055 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FFA47C1F1EC88F9600465E11 /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
 		FFA47C241EC88FEF00465E11 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		FFA47C261EC8912000465E11 /* RealmDataImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDataImporter.swift; sourceTree = "<group>"; };
@@ -261,6 +267,7 @@
 		FF05CB531EC87EE000192647 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FF834F601ECCC12B000DE055 /* BaseViewController.swift */,
 				FF05CB541EC87EE000192647 /* AddNewExpenseViewController.swift */,
 				FF05CB551EC87EE000192647 /* AddNewExpenseViewController.xib */,
 				FF05CB561EC87EE000192647 /* Animator.swift */,
@@ -274,6 +281,8 @@
 				FF05CB5B1EC87EE000192647 /* SettingsViewController.swift */,
 				FF05CB5C1EC87EE000192647 /* SettingsViewController.xib */,
 				FFA47C411EC8E54000465E11 /* ColorPaletteTableViewController.swift */,
+				FF834F5C1ECCAAE0000DE055 /* NewCategoryViewController.swift */,
+				FF834F5D1ECCAAE0000DE055 /* NewCategoryViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -693,6 +702,7 @@
 				FFA47C461EC8E59B00465E11 /* ColorTableViewCell.xib in Resources */,
 				FFB47E3A1EA94B2A00B36507 /* LaunchScreen.storyboard in Resources */,
 				FF05CB651EC87EE000192647 /* SettingsViewController.xib in Resources */,
+				FF834F5F1ECCAAE0000DE055 /* NewCategoryViewController.xib in Resources */,
 				FF834F4E1ECC91D4000DE055 /* SummaryTableViewCell.xib in Resources */,
 				FFA7D7671EC7948C009DF4C3 /* CategoryCollectionViewCell.xib in Resources */,
 				FF05CB5E1EC87EE000192647 /* AddNewExpenseViewController.xib in Resources */,
@@ -828,6 +838,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF834F401ECC7346000DE055 /* Expense.swift in Sources */,
+				FF834F5E1ECCAAE0000DE055 /* NewCategoryViewController.swift in Sources */,
 				FF834F591ECC9B27000DE055 /* ExpenseSummaryViewController+Delegate.swift in Sources */,
 				FF05CB631EC87EE000192647 /* PrivateTransitionContext.swift in Sources */,
 				FF834F421ECC75EE000DE055 /* Persistable.swift in Sources */,
@@ -837,6 +848,7 @@
 				FF05CB5D1EC87EE000192647 /* AddNewExpenseViewController.swift in Sources */,
 				FFA47C2E1EC8A69D00465E11 /* String+UIColor.swift in Sources */,
 				FFA7D7601EC790A3009DF4C3 /* AnimatedCollectionViewLayout.swift in Sources */,
+				FF834F611ECCC12B000DE055 /* BaseViewController.swift in Sources */,
 				FFA47C401EC8E30E00465E11 /* FlatUIColors.swift in Sources */,
 				FFA47C3E1EC8CB6100465E11 /* UIColor+FamilyPocket.swift in Sources */,
 				FFA47C421EC8E54000465E11 /* ColorPaletteTableViewController.swift in Sources */,

@@ -41,9 +41,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89g-u7-sfL">
-                        <rect key="frame" x="15.5" y="37.5" width="29.5" height="14"/>
+                        <rect key="frame" x="15.5" y="40.5" width="29.5" height="14"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                        <color key="textColor" white="1" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
+                        <color key="textColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -52,7 +52,7 @@
                     <constraint firstItem="89g-u7-sfL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" id="56M-6l-r31"/>
                     <constraint firstItem="WkK-hF-g2q" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="MX6-jk-zSc"/>
                     <constraint firstItem="89g-u7-sfL" firstAttribute="centerX" secondItem="DYW-fh-3dH" secondAttribute="centerX" id="Vof-7b-zGb"/>
-                    <constraint firstAttribute="bottom" secondItem="89g-u7-sfL" secondAttribute="bottom" constant="3" id="WrV-8k-KFK"/>
+                    <constraint firstAttribute="bottom" secondItem="89g-u7-sfL" secondAttribute="bottom" id="WrV-8k-KFK"/>
                     <constraint firstAttribute="bottom" secondItem="UPa-Xy-buP" secondAttribute="bottom" id="fYn-uX-RMT"/>
                     <constraint firstItem="DYW-fh-3dH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gfc-e7-mCA"/>
                     <constraint firstAttribute="trailing" secondItem="UPa-Xy-buP" secondAttribute="trailing" constant="8" id="meh-Rg-huQ"/>

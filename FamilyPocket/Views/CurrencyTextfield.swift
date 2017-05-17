@@ -36,7 +36,20 @@ protocol AlphaAnimatable {
     func animate()
 }
 
-class CurrencyTextfield: UITextField, AlphaAnimatable {
+class PaddingTextfield: UITextField {
+    var paddingLeft: CGFloat = 0
+    var paddingRight: CGFloat = 0
+    
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return CGRect(x: bounds.origin.x + paddingLeft, y: bounds.origin.y, width: bounds.size.width - paddingLeft - paddingRight, height: bounds.size.height)
+    }
+    
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return textRect(forBounds: bounds)
+    }
+}
+
+class CurrencyTextfield: PaddingTextfield, AlphaAnimatable {
 
     var valueHandler: ((Bool) -> ())?
     var string: String { return text ?? "" }

@@ -28,6 +28,11 @@ class CategoryManager: Persistable {
     
     func add(object: Object) {
         
+        let realm = try! Realm()
+        
+        try! realm.write {
+            realm.add(object)
+        }
     }
     
     func delete(object: Object) {

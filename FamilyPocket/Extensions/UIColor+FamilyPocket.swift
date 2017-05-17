@@ -16,7 +16,7 @@ extension UIColor {
     
 }
 
-private extension UIColor
+extension UIColor
 {
     func hexString() -> String
     {

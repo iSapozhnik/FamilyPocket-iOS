@@ -28,22 +28,17 @@ extension ExpenseSummaryViewController: UITableViewDataSource {
         
         let expense = items[indexPath.row]
         
+        
+        
         let presenter = ExpenseSummaryViewController.datePresenter
-        let color: UIColor
-        let categoryIcon: UIImage?
-        let categoryName: String
-        if
-            let category = expense.category,
-            let colorString = category.color,
-            let categoryIconName = category.iconName {
-            categoryIcon = UIImage(named: categoryIconName)
-            color = colorString.hexColor
-            categoryName = category.name
-        } else {
-            color = .gray
-            categoryIcon = nil
-            categoryName = ""
-        }
+
+        let category = expense.category
+        let categoryName = category?.name ?? "-/-"
+        let colorString = category?.color
+        let color = colorString?.hexColor ?? UIColor.mainGreenColor()
+        let categoryIconName = category?.iconName ?? ""
+        let categoryIcon = UIImage(named: categoryIconName)
+        
         cell.bind(withValue: Formatter.currency.string(for: expense.value) ?? "-/-", dateString: presenter.string(fromDate: expense.date), categoryImage: categoryIcon, categoryColor: color, categoryName: categoryName)
         
         return cell
