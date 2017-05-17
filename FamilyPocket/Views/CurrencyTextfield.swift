@@ -17,7 +17,7 @@ extension NumberFormatter {
 extension Formatter {
     static var currency: NumberFormatter {
         let result = NumberFormatter(numberStyle: .currency)
-        result.paddingPosition = .afterPrefix
+//        result.paddingPosition = .afterPrefix
         return result
     }
 }

@@ -10,9 +10,9 @@ import Foundation
 import RealmSwift
 
 class CategoryManager: Persistable {
-    typealias Object = Category
+    typealias ObjectClass = Category
     
-    func allObjects(withCompletion completion: ([Category]?) -> ()) {
+    func allObjects(withCompletion completion: @escaping ([Category]?) -> ()) {
         
         let realm = try! Realm()
         
@@ -26,11 +26,39 @@ class CategoryManager: Persistable {
         completion(Array(categories))
     }
     
-    func add(object: Category) {
+    func add(object: Object) {
         
     }
     
-    func delete(object: Category) {
+    func delete(object: Object) {
         
     }
+}
+
+class IncomeCategoryManager: Persistable {
+    
+    typealias ObjectClass = IncomeCategory
+    
+    func allObjects(withCompletion completion: @escaping ([IncomeCategory]?) -> ()) {
+        
+        let realm = try! Realm()
+        
+        let dataImporter = RealmDataImporter()
+        
+        if !dataImporter.initialDataImported() {
+            dataImporter.importCategories()
+        }
+        
+        let categories = realm.objects(IncomeCategory.self).sorted(byKeyPath: "popularity", ascending: false)
+        completion(Array(categories))
+    }
+    
+    func add(object: Object) {
+        
+    }
+    
+    func delete(object: Object) {
+        
+    }
+    
 }

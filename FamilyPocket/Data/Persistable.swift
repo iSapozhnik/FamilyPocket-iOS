@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import RealmSwift
 
 protocol Persistable {
-    associatedtype Object
+    associatedtype ObjectClass
     
-    func allObjects(withCompletion completion: ([Object]?) -> ())
+    func allObjects(withCompletion completion: @escaping  ([ObjectClass]?) -> ())
     func add(object: Object)
     func delete(object: Object)
     

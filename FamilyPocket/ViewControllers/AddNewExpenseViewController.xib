@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="collectionView" destination="17g-LD-d36" id="KRe-9W-61s"/>
                 <outlet property="currencyTextfield" destination="4nT-p7-10k" id="uWk-Cu-3IP"/>
+                <outlet property="expenseSegmentedControl" destination="tPm-8r-Fes" id="0Jc-v7-gza"/>
                 <outlet property="overlayButton" destination="CyW-ZP-1vb" id="itN-ns-8xI"/>
                 <outlet property="saveButton" destination="Yg5-jT-4nH" id="Ccp-H4-s0n"/>
                 <outlet property="saveButtonBottomConstraint" destination="l1m-yZ-jPc" id="ma9-HZ-cl9"/>
@@ -40,8 +41,22 @@
                         <action selector="endEditing:" destination="-1" eventType="touchUpInside" id="Qml-sa-t26"/>
                     </connections>
                 </button>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tPm-8r-Fes">
+                    <rect key="frame" x="50" y="90" width="275" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="fgG-CO-0cV"/>
+                    </constraints>
+                    <segments>
+                        <segment title="Expense"/>
+                        <segment title="Income"/>
+                    </segments>
+                    <color key="tintColor" white="1" alpha="0.80094630281690138" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="onCategoryTypeChange:" destination="-1" eventType="valueChanged" id="DQW-xE-sq2"/>
+                    </connections>
+                </segmentedControl>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="€" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4nT-p7-10k" customClass="CurrencyTextfield" customModule="FamilyPocket" customModuleProvider="target">
-                    <rect key="frame" x="55" y="90" width="265" height="54"/>
+                    <rect key="frame" x="20" y="150" width="335" height="54"/>
                     <color key="backgroundColor" white="1" alpha="0.10012189716312057" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="54" id="tvI-WW-TIc"/>
@@ -58,60 +73,11 @@
                         <outlet property="delegate" destination="Jdz-mD-3ur" id="kKf-5H-z0s"/>
                     </connections>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yu-WL-g6m">
-                    <rect key="frame" x="7" y="97" width="40" height="40"/>
-                    <color key="backgroundColor" red="0.85490196080000003" green="0.14117647059999999" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="84j-vd-zI9"/>
-                        <constraint firstAttribute="width" constant="40" id="Y6K-Gj-rOd"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
-                    <state key="normal" title="Expense">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="20"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                            <integer key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="onExpense:" destination="-1" eventType="touchUpInside" id="hvJ-uT-caS"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Df-Vh-7l0">
-                    <rect key="frame" x="328" y="97" width="40" height="40"/>
-                    <color key="backgroundColor" red="0.29227846860000001" green="0.78080707790000003" blue="0.45123803620000003" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="uxC-2i-Knf"/>
-                        <constraint firstAttribute="width" constant="40" id="xs3-gX-SAI"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
-                    <state key="normal" title="Income">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="20"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                            <integer key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="17g-LD-d36">
-                    <rect key="frame" x="0.0" y="167" width="375" height="120"/>
+                    <rect key="frame" x="0.0" y="227" width="375" height="80"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="120" id="cCb-VZ-CGX"/>
+                        <constraint firstAttribute="height" constant="80" id="cCb-VZ-CGX"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="wrG-dk-RSA" customClass="AnimatedCollectionViewLayout" customModule="FamilyPocket" customModuleProvider="target">
                         <size key="itemSize" width="375" height="120"/>
@@ -139,29 +105,39 @@
                         <outlet property="bottomConstraint" destination="l1m-yZ-jPc" id="p9X-57-C1h"/>
                     </connections>
                 </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0We-3e-KLe">
+                    <rect key="frame" x="16" y="315" width="343" height="300"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" red="0.058823529411764705" green="0.49803921568627452" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="1Df-Vh-7l0" firstAttribute="centerY" secondItem="4nT-p7-10k" secondAttribute="centerY" id="1Zo-y8-h31"/>
-                <constraint firstItem="4nT-p7-10k" firstAttribute="leading" secondItem="7yu-WL-g6m" secondAttribute="trailing" constant="8" id="1ex-HD-XZ0"/>
                 <constraint firstAttribute="trailing" secondItem="17g-LD-d36" secondAttribute="trailing" id="6eB-9j-rCJ"/>
-                <constraint firstItem="7yu-WL-g6m" firstAttribute="centerY" secondItem="4nT-p7-10k" secondAttribute="centerY" id="7iK-ol-edx"/>
+                <constraint firstItem="tPm-8r-Fes" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="9Qc-6x-gxe"/>
                 <constraint firstAttribute="trailing" secondItem="Yg5-jT-4nH" secondAttribute="trailing" id="AeE-Jq-OJi"/>
+                <constraint firstItem="0We-3e-KLe" firstAttribute="top" secondItem="17g-LD-d36" secondAttribute="bottom" constant="8" id="BXg-Nw-a8x"/>
                 <constraint firstItem="Ptz-4Q-jxA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="BaF-FN-iTG"/>
-                <constraint firstItem="1Df-Vh-7l0" firstAttribute="leading" secondItem="4nT-p7-10k" secondAttribute="trailing" constant="8" id="CZW-L9-6KB"/>
-                <constraint firstAttribute="trailing" secondItem="4nT-p7-10k" secondAttribute="trailing" constant="55" id="JBK-2O-VCL"/>
+                <constraint firstAttribute="trailing" secondItem="4nT-p7-10k" secondAttribute="trailing" constant="20" id="JBK-2O-VCL"/>
                 <constraint firstItem="Yg5-jT-4nH" firstAttribute="top" secondItem="CyW-ZP-1vb" secondAttribute="bottom" id="P4D-2d-LMh"/>
                 <constraint firstItem="17g-LD-d36" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Tby-FY-2HN"/>
+                <constraint firstItem="0We-3e-KLe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="UUq-hN-qAU"/>
+                <constraint firstItem="tPm-8r-Fes" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="bBc-nA-zNN"/>
                 <constraint firstItem="17g-LD-d36" firstAttribute="top" secondItem="4nT-p7-10k" secondAttribute="bottom" constant="23" id="cAS-ps-Ilf"/>
                 <constraint firstAttribute="trailing" secondItem="CyW-ZP-1vb" secondAttribute="trailing" id="dAZ-ps-6Ms"/>
                 <constraint firstItem="Yg5-jT-4nH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eiL-uc-RXk"/>
+                <constraint firstAttribute="trailing" secondItem="tPm-8r-Fes" secondAttribute="trailing" constant="50" id="ffO-Sq-UNx"/>
+                <constraint firstItem="Yg5-jT-4nH" firstAttribute="top" secondItem="0We-3e-KLe" secondAttribute="bottom" constant="8" id="k5a-m4-RDj"/>
                 <constraint firstAttribute="bottom" secondItem="Yg5-jT-4nH" secondAttribute="bottom" id="l1m-yZ-jPc"/>
                 <constraint firstItem="Ptz-4Q-jxA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="rFN-np-9Tu"/>
-                <constraint firstItem="4nT-p7-10k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="55" id="sMM-fF-FAY"/>
+                <constraint firstItem="4nT-p7-10k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="sMM-fF-FAY"/>
                 <constraint firstAttribute="trailing" secondItem="Ptz-4Q-jxA" secondAttribute="trailing" constant="50" id="tdb-B7-xac"/>
+                <constraint firstAttribute="trailing" secondItem="0We-3e-KLe" secondAttribute="trailing" constant="16" id="vX4-WJ-2jQ"/>
                 <constraint firstItem="CyW-ZP-1vb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vae-Mc-pR6"/>
                 <constraint firstItem="CyW-ZP-1vb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wM0-0B-Y0I"/>
-                <constraint firstItem="4nT-p7-10k" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="wuS-AC-iOq"/>
+                <constraint firstItem="4nT-p7-10k" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="wuS-AC-iOq"/>
             </constraints>
             <point key="canvasLocation" x="26.5" y="52.5"/>
         </view>

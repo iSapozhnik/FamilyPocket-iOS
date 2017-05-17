@@ -18,11 +18,21 @@
 		FF05CB631EC87EE000192647 /* PrivateTransitionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05CB5A1EC87EE000192647 /* PrivateTransitionContext.swift */; };
 		FF05CB641EC87EE000192647 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05CB5B1EC87EE000192647 /* SettingsViewController.swift */; };
 		FF05CB651EC87EE000192647 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF05CB5C1EC87EE000192647 /* SettingsViewController.xib */; };
+		FF834F401ECC7346000DE055 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F3F1ECC7346000DE055 /* Expense.swift */; };
+		FF834F421ECC75EE000DE055 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F411ECC75EE000DE055 /* Persistable.swift */; };
+		FF834F441ECC76B2000DE055 /* ExpenseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F431ECC76B2000DE055 /* ExpenseManager.swift */; };
+		FF834F461ECC8981000DE055 /* incomeCategories.json in Resources */ = {isa = PBXBuildFile; fileRef = FF834F451ECC8981000DE055 /* incomeCategories.json */; };
+		FF834F481ECC90BE000DE055 /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F471ECC90BE000DE055 /* TestTableViewController.swift */; };
+		FF834F4A1ECC90DA000DE055 /* ExpenseSummaryViewController+DataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F491ECC90DA000DE055 /* ExpenseSummaryViewController+DataSourse.swift */; };
+		FF834F4D1ECC91D4000DE055 /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F4B1ECC91D4000DE055 /* SummaryTableViewCell.swift */; };
+		FF834F4E1ECC91D4000DE055 /* SummaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF834F4C1ECC91D4000DE055 /* SummaryTableViewCell.xib */; };
+		FF834F571ECC97A1000DE055 /* DatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F561ECC97A1000DE055 /* DatePresenter.swift */; };
+		FF834F591ECC9B27000DE055 /* ExpenseSummaryViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F581ECC9B27000DE055 /* ExpenseSummaryViewController+Delegate.swift */; };
+		FF834F5B1ECC9F69000DE055 /* Income.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F5A1ECC9F69000DE055 /* Income.swift */; };
 		FFA47C201EC88F9600465E11 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = FFA47C1F1EC88F9600465E11 /* categories.json */; };
 		FFA47C251EC88FEF00465E11 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C241EC88FEF00465E11 /* Category.swift */; };
 		FFA47C271EC8912000465E11 /* RealmDataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C261EC8912000465E11 /* RealmDataImporter.swift */; };
 		FFA47C2A1EC8A01F00465E11 /* CategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C291EC8A01F00465E11 /* CategoryManager.swift */; };
-		FFA47C2C1EC8A04000465E11 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C2B1EC8A04000465E11 /* Persistable.swift */; };
 		FFA47C2E1EC8A69D00465E11 /* String+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C2D1EC8A69D00465E11 /* String+UIColor.swift */; };
 		FFA47C321EC8A6F000465E11 /* UIColor+LighterDarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C311EC8A6F000465E11 /* UIColor+LighterDarker.swift */; };
 		FFA47C351EC8A78600465E11 /* CategoryCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C341EC8A78600465E11 /* CategoryCollectionViewDelegate.swift */; };
@@ -129,11 +139,21 @@
 		FF05CB5A1EC87EE000192647 /* PrivateTransitionContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateTransitionContext.swift; sourceTree = "<group>"; };
 		FF05CB5B1EC87EE000192647 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FF05CB5C1EC87EE000192647 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		FF834F3F1ECC7346000DE055 /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		FF834F411ECC75EE000DE055 /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
+		FF834F431ECC76B2000DE055 /* ExpenseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseManager.swift; sourceTree = "<group>"; };
+		FF834F451ECC8981000DE055 /* incomeCategories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = incomeCategories.json; sourceTree = "<group>"; };
+		FF834F471ECC90BE000DE055 /* TestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
+		FF834F491ECC90DA000DE055 /* ExpenseSummaryViewController+DataSourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExpenseSummaryViewController+DataSourse.swift"; sourceTree = "<group>"; };
+		FF834F4B1ECC91D4000DE055 /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
+		FF834F4C1ECC91D4000DE055 /* SummaryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummaryTableViewCell.xib; sourceTree = "<group>"; };
+		FF834F561ECC97A1000DE055 /* DatePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePresenter.swift; sourceTree = "<group>"; };
+		FF834F581ECC9B27000DE055 /* ExpenseSummaryViewController+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExpenseSummaryViewController+Delegate.swift"; sourceTree = "<group>"; };
+		FF834F5A1ECC9F69000DE055 /* Income.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Income.swift; sourceTree = "<group>"; };
 		FFA47C1F1EC88F9600465E11 /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
 		FFA47C241EC88FEF00465E11 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		FFA47C261EC8912000465E11 /* RealmDataImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDataImporter.swift; sourceTree = "<group>"; };
 		FFA47C291EC8A01F00465E11 /* CategoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryManager.swift; sourceTree = "<group>"; };
-		FFA47C2B1EC8A04000465E11 /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
 		FFA47C2D1EC8A69D00465E11 /* String+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+UIColor.swift"; sourceTree = "<group>"; };
 		FFA47C311EC8A6F000465E11 /* UIColor+LighterDarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+LighterDarker.swift"; sourceTree = "<group>"; };
 		FFA47C341EC8A78600465E11 /* CategoryCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +198,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A237D639C450D0F7A90E3B3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFA47C671EC8F47F00465E11 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -238,6 +265,9 @@
 				FF05CB551EC87EE000192647 /* AddNewExpenseViewController.xib */,
 				FF05CB561EC87EE000192647 /* Animator.swift */,
 				FF05CB571EC87EE000192647 /* ExpenseSummaryViewController.swift */,
+				FF834F491ECC90DA000DE055 /* ExpenseSummaryViewController+DataSourse.swift */,
+				FF834F581ECC9B27000DE055 /* ExpenseSummaryViewController+Delegate.swift */,
+				FF834F471ECC90BE000DE055 /* TestTableViewController.swift */,
 				FF05CB581EC87EE000192647 /* ExpenseSummaryViewController.xib */,
 				FF05CB591EC87EE000192647 /* HostingViewController.swift */,
 				FF05CB5A1EC87EE000192647 /* PrivateTransitionContext.swift */,
@@ -246,6 +276,14 @@
 				FFA47C411EC8E54000465E11 /* ColorPaletteTableViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FF834F551ECC978A000DE055 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FF834F561ECC97A1000DE055 /* DatePresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		FFA47C1D1EC88F9600465E11 /* Resources */ = {
@@ -259,6 +297,7 @@
 		FFA47C1E1EC88F9600465E11 /* RealmJSONs */ = {
 			isa = PBXGroup;
 			children = (
+				FF834F451ECC8981000DE055 /* incomeCategories.json */,
 				FFA47C1F1EC88F9600465E11 /* categories.json */,
 			);
 			path = RealmJSONs;
@@ -267,6 +306,8 @@
 		FFA47C211EC88FC000465E11 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				FF834F411ECC75EE000DE055 /* Persistable.swift */,
+				FF834F431ECC76B2000DE055 /* ExpenseManager.swift */,
 				FFA47C281EC89EE700465E11 /* CategoryManager */,
 				FFA47C231EC88FE000465E11 /* RealmModels */,
 				FFA47C221EC88FC000465E11 /* RealmDataImporter */,
@@ -286,6 +327,8 @@
 			isa = PBXGroup;
 			children = (
 				FFA47C241EC88FEF00465E11 /* Category.swift */,
+				FF834F3F1ECC7346000DE055 /* Expense.swift */,
+				FF834F5A1ECC9F69000DE055 /* Income.swift */,
 			);
 			path = RealmModels;
 			sourceTree = "<group>";
@@ -293,7 +336,6 @@
 		FFA47C281EC89EE700465E11 /* CategoryManager */ = {
 			isa = PBXGroup;
 			children = (
-				FFA47C2B1EC8A04000465E11 /* Persistable.swift */,
 				FFA47C291EC8A01F00465E11 /* CategoryManager.swift */,
 			);
 			path = CategoryManager;
@@ -358,6 +400,8 @@
 				FFA7D7581EC77FDE009DF4C3 /* CurrencyTextfield.swift */,
 				FFA47C431EC8E59B00465E11 /* ColorTableViewCell.swift */,
 				FFA47C441EC8E59B00465E11 /* ColorTableViewCell.xib */,
+				FF834F4B1ECC91D4000DE055 /* SummaryTableViewCell.swift */,
+				FF834F4C1ECC91D4000DE055 /* SummaryTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -425,6 +469,7 @@
 				FF05CB531EC87EE000192647 /* ViewControllers */,
 				FFA7D74B1EC76446009DF4C3 /* Views */,
 				FFA47C211EC88FC000465E11 /* Data */,
+				FF834F551ECC978A000DE055 /* Presenter */,
 				FFA7D7501EC77C07009DF4C3 /* DelegatesDataSources */,
 				FFA47C3A1EC8BAF900465E11 /* Utility */,
 				FFB47E671EA955C300B36507 /* Extensions */,
@@ -473,6 +518,7 @@
 			buildPhases = (
 				FFA47C5C1EC8F47F00465E11 /* Resources */,
 				FFA47C841EC8F47F00465E11 /* Embed App Extensions */,
+				A237D639C450D0F7A90E3B3D /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -647,9 +693,11 @@
 				FFA47C461EC8E59B00465E11 /* ColorTableViewCell.xib in Resources */,
 				FFB47E3A1EA94B2A00B36507 /* LaunchScreen.storyboard in Resources */,
 				FF05CB651EC87EE000192647 /* SettingsViewController.xib in Resources */,
+				FF834F4E1ECC91D4000DE055 /* SummaryTableViewCell.xib in Resources */,
 				FFA7D7671EC7948C009DF4C3 /* CategoryCollectionViewCell.xib in Resources */,
 				FF05CB5E1EC87EE000192647 /* AddNewExpenseViewController.xib in Resources */,
 				FFB47E371EA94B2A00B36507 /* Assets.xcassets in Resources */,
+				FF834F461ECC8981000DE055 /* incomeCategories.json in Resources */,
 				FF05CB611EC87EE000192647 /* ExpenseSummaryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -728,7 +776,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		CB3C5E4DACDA0FBCE68FB6CB /* [CP] Check Pods Manifest.lock */ = {
@@ -743,7 +791,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		EB28B593F98B17FBA65DD63D /* [CP] Embed Pods Frameworks */ = {
@@ -779,14 +827,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF834F401ECC7346000DE055 /* Expense.swift in Sources */,
+				FF834F591ECC9B27000DE055 /* ExpenseSummaryViewController+Delegate.swift in Sources */,
 				FF05CB631EC87EE000192647 /* PrivateTransitionContext.swift in Sources */,
+				FF834F421ECC75EE000DE055 /* Persistable.swift in Sources */,
 				FFA47C3C1EC8BB0E00465E11 /* KeyboardUtility.swift in Sources */,
+				FF834F4A1ECC90DA000DE055 /* ExpenseSummaryViewController+DataSourse.swift in Sources */,
+				FF834F441ECC76B2000DE055 /* ExpenseManager.swift in Sources */,
 				FF05CB5D1EC87EE000192647 /* AddNewExpenseViewController.swift in Sources */,
 				FFA47C2E1EC8A69D00465E11 /* String+UIColor.swift in Sources */,
 				FFA7D7601EC790A3009DF4C3 /* AnimatedCollectionViewLayout.swift in Sources */,
 				FFA47C401EC8E30E00465E11 /* FlatUIColors.swift in Sources */,
 				FFA47C3E1EC8CB6100465E11 /* UIColor+FamilyPocket.swift in Sources */,
 				FFA47C421EC8E54000465E11 /* ColorPaletteTableViewController.swift in Sources */,
+				FF834F481ECC90BE000DE055 /* TestTableViewController.swift in Sources */,
 				FFA47C321EC8A6F000465E11 /* UIColor+LighterDarker.swift in Sources */,
 				FF05CB601EC87EE000192647 /* ExpenseSummaryViewController.swift in Sources */,
 				FF05CB621EC87EE000192647 /* HostingViewController.swift in Sources */,
@@ -794,15 +848,17 @@
 				FFA47C271EC8912000465E11 /* RealmDataImporter.swift in Sources */,
 				FFB47E301EA94B2A00B36507 /* AppDelegate.swift in Sources */,
 				FFA47C251EC88FEF00465E11 /* Category.swift in Sources */,
-				FFA47C2C1EC8A04000465E11 /* Persistable.swift in Sources */,
 				FF05CB641EC87EE000192647 /* SettingsViewController.swift in Sources */,
 				FFA47C2A1EC8A01F00465E11 /* CategoryManager.swift in Sources */,
 				FFA7D7611EC790A3009DF4C3 /* CubeAttributesAnimator.swift in Sources */,
 				FFA7D7561EC77FC8009DF4C3 /* AButton.swift in Sources */,
 				FFA7D7591EC77FDE009DF4C3 /* CurrencyTextfield.swift in Sources */,
 				FFA47C391EC8A94700465E11 /* CategoryCollectionViewDataSource.swift in Sources */,
+				FF834F571ECC97A1000DE055 /* DatePresenter.swift in Sources */,
+				FF834F5B1ECC9F69000DE055 /* Income.swift in Sources */,
 				FFA7D7571EC77FC8009DF4C3 /* ALabel.swift in Sources */,
 				FFA47C451EC8E59B00465E11 /* ColorTableViewCell.swift in Sources */,
+				FF834F4D1ECC91D4000DE055 /* SummaryTableViewCell.swift in Sources */,
 				FF05CB5F1EC87EE000192647 /* Animator.swift in Sources */,
 				FFA47C351EC8A78600465E11 /* CategoryCollectionViewDelegate.swift in Sources */,
 				FFA7D7661EC7948C009DF4C3 /* CategoryCollectionViewCell.swift in Sources */,
@@ -1133,6 +1189,7 @@
 				FFA47C821EC8F47F00465E11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FFA47C851EC8F47F00465E11 /* Build configuration list for PBXNativeTarget "FamilyPocketWatch" */ = {
 			isa = XCConfigurationList;
@@ -1141,6 +1198,7 @@
 				FFA47C801EC8F47F00465E11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FFB47E271EA94B2A00B36507 /* Build configuration list for PBXProject "FamilyPocket" */ = {
 			isa = XCConfigurationList;

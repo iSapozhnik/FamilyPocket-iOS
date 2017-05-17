@@ -4,42 +4,42 @@
       "name": "Internet",
       "dateOfCreation": "2014-06-25",
       "popularity": 3,
-      "color": "#42b3f4",
+      "color": "#BE90D4",
       "iconName": "Globe-80.png"
     },
      {
      "name": "Games",
      "dateOfCreation": "2014-06-25",
      "popularity": 3,
-     "color": "#42b3f4",
+     "color": "#86E2D5",
      "iconName": "Controller-80.png"
      },
      {
      "name": "Gym/Sport",
      "dateOfCreation": "2014-06-25",
      "popularity": 3,
-     "color": "#42b3f4",
+     "color": "#F27935",
      "iconName": "Barbell-80.png"
      },
      {
      "name": "Shopping",
      "dateOfCreation": "2014-06-25",
      "popularity": 3,
-     "color": "#42b3f4",
+     "color": "#F39C12",
      "iconName": "Shopping Cart-80.png"
      },
      {
      "name": "Cell Phone",
      "dateOfCreation": "2014-06-25",
      "popularity": 34,
-     "color": "#42b3f4",
+     "color": "#BDC3C7",
      "iconName": "Cell Phone-80.png"
      },
     {
       "name": "Food",
       "dateOfCreation": "2014-06-25",
       "popularity": 112,
-      "color": "#42b3f4",
+      "color": "#487D37",
       "iconName": "Food-80.png"
     },
     {

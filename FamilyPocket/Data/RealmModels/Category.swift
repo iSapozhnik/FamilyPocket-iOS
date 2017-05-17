@@ -23,3 +23,5 @@ class Category: Object {
     dynamic var color: String?
     dynamic var iconName: String?
 }
+
+class IncomeCategory: Category {}

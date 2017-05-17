@@ -1,0 +1,18 @@
+{
+  "categories": [
+    {
+      "name": "Salary",
+      "dateOfCreation": "2014-06-25",
+      "popularity": 3,
+      "color": "#27ae60",
+      "iconName": ""
+    },
+     {
+     "name": "Scholarship",
+     "dateOfCreation": "2014-06-25",
+     "popularity": 3,
+     "color": "#27ae60",
+     "iconName": ""
+     }
+  ]
+}

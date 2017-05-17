@@ -12,7 +12,6 @@ class CategoryCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var iconView: UIImageView!
-    
     @IBOutlet weak var iconLeftConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {

@@ -10,11 +10,17 @@ import UIKit
 
 protocol CategoryDelegate: NSObjectProtocol {
     func wantAddNewCategory()
+    func didSelect(categoryItem category: Category?)
 }
 
 class CategoryCollectionViewDelegate: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    var items: [Category] = []
+    var items: [Category] = [] {
+        didSet {
+//            guard let category = items.first else { return }
+//            controller.didSelect(categoryItem: category)
+        }
+    }
     weak var controller: CategoryDelegate!
     
     init(withController controller: CategoryDelegate) {
@@ -27,11 +33,15 @@ class CategoryCollectionViewDelegate: NSObject, UICollectionViewDelegate, UIColl
         if indexPath.row == items.count {
             controller.wantAddNewCategory()
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
+        if indexPath.row != items.count {
+            let category = items[indexPath.row]
+            controller.didSelect(categoryItem: category)
+        } else {
+            controller.didSelect(categoryItem: nil)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

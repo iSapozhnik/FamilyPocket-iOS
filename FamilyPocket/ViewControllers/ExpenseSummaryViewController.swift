@@ -7,10 +7,21 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ExpenseSummaryViewController: UIViewController {
-
+    
+    lazy var expenseManager = ExpenseManager()
+    let cellIdentifier = "cellIdentifier"
+    
     @IBOutlet weak var titleLabel: ALabel!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var items: [Expense]! = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .default
@@ -34,11 +45,19 @@ class ExpenseSummaryViewController: UIViewController {
         super.viewDidLoad()
         
         print("ExpenseSummaryViewController viewDidLoad")
+        tableView.register(UINib.init(nibName: "SummaryTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        expenseManager = ExpenseManager()
+        expenseManager.allObjects { [weak self] (expenses) in
+            if let expenses = expenses {
+                print("Expenses: \(expenses)")
+                self?.items = expenses
+            }
+        }
     }
     
 

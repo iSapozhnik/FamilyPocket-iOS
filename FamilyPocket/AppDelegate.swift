@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window = UIWindow()
         }
         
+        RealmDataImporter.databaseURL()
+        
 //        let importer = RealmDataImporter()
 //        importer.removeData()
         
