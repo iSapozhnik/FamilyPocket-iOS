@@ -16,6 +16,10 @@ class SettingsViewController: UIViewController {
         super.viewDidAppear(animated)
         
         titleLabel.animate()
+        
+        CategoryManager().allObjects { (categories) in
+            
+        }
     }
     
     override func viewDidLoad() {

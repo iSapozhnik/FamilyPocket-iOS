@@ -58,6 +58,14 @@ class RealmDataImporter {
             
             for category in categories {
                 
+                do {
+                    // passing data via WatchSessionManager's updateApplicationContext here!
+                    
+                    try WatchSessionManager.sharedManager.updateApplicationContext(applicationContext: [Constants.SharedKeys.category.key():category])
+                } catch let error {
+                    print(error)
+                }
+                
                 let rmCategory = Category()
                 rmCategory.name = category["name"] as! String
                 rmCategory.color = category["color"] as? String

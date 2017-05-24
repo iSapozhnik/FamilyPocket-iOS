@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 import RealmSwift
 
-class CategoriesInterfaceController: WKInterfaceController {
+class CategoriesInterfaceController: WKInterfaceController, DataSourceChangedDelegate {
 
     @IBOutlet var tableView: WKInterfaceTable!
     override func awake(withContext context: Any?) {
@@ -18,11 +18,12 @@ class CategoriesInterfaceController: WKInterfaceController {
         
         // Configure interface objects here.
         
-//        let directory: URL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.Ivan.Sapozhnik.FamilyPocket")!
-//        let realmPath = directory.path.appending("db.realm")
-//        var configuration = Realm.Configuration.defaultConfiguration
-//        configuration.fileURL = URL(string: realmPath)
-//        Realm.Configuration.defaultConfiguration = configuration
+        WatchSessionManager.sharedManager.addDataSourceChangedDelegate(delegate: self)
+        if let category = UserDefaults.standard.value(forKey: Constants.SharedKeys.category.key()) as? Dictionary<String, Any> {
+            self.tableView.setNumberOfRows(8, withRowType: "Categories")
+        } else {
+            self.tableView.setNumberOfRows(0, withRowType: "Categories")
+        }
     }
 
     override func willActivate() {
@@ -32,7 +33,21 @@ class CategoriesInterfaceController: WKInterfaceController {
 
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
+        
+        WatchSessionManager.sharedManager.removeDataSourceChangedDelegate(delegate: self)
+        
         super.didDeactivate()
+    }
+    
+    // MARK: DataSourceUpdatedDelegate
+    // update the food label once the data is changed!
+    func dataSourceDidUpdate(dataSource: Dictionary<String, Any>) {
+        if let category = dataSource["category"] {
+            UserDefaults.standard.set(category, forKey: Constants.SharedKeys.category.key())
+            UserDefaults.standard.synchronize()
+        }
+        self.tableView.setNumberOfRows(8, withRowType: "Categories")
+
     }
 
 }

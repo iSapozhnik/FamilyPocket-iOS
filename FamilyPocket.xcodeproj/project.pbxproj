@@ -22,6 +22,24 @@
 		FF82A7DA1ED5C9DC00BA27F0 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF82A7D81ED5C9DC00BA27F0 /* RealmSwift.framework */; };
 		FF82A7E31ED5CA0500BA27F0 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF82A7E11ED5CA0500BA27F0 /* Realm.framework */; };
 		FF82A7E41ED5CA0500BA27F0 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF82A7E21ED5CA0500BA27F0 /* RealmSwift.framework */; };
+		FF82A7E51ED5CC7400BA27F0 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF82A7D71ED5C9DC00BA27F0 /* Realm.framework */; };
+		FF82A7E61ED5CC7400BA27F0 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF82A7D71ED5C9DC00BA27F0 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF82A7E71ED5CC7400BA27F0 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF82A7D81ED5C9DC00BA27F0 /* RealmSwift.framework */; };
+		FF82A7E81ED5CC7400BA27F0 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF82A7D81ED5C9DC00BA27F0 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF82A7E91ED5CC7B00BA27F0 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF82A7E11ED5CA0500BA27F0 /* Realm.framework */; };
+		FF82A7EA1ED5CC7B00BA27F0 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF82A7E11ED5CA0500BA27F0 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF82A7EB1ED5CC7B00BA27F0 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF82A7E21ED5CA0500BA27F0 /* RealmSwift.framework */; };
+		FF82A7EC1ED5CC7B00BA27F0 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF82A7E21ED5CA0500BA27F0 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF82A7F01ED5CF7000BA27F0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA47C241EC88FEF00465E11 /* Category.swift */; };
+		FF82A7F11ED5CF7200BA27F0 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F3F1ECC7346000DE055 /* Expense.swift */; };
+		FF82A7F21ED5CF7400BA27F0 /* Income.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F5A1ECC9F69000DE055 /* Income.swift */; };
+		FF82A7F31ED5CF7E00BA27F0 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F411ECC75EE000DE055 /* Persistable.swift */; };
+		FF82A7F61ED5F0E000BA27F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82A7F51ED5F0E000BA27F0 /* Constants.swift */; };
+		FF82A7F71ED5F0E000BA27F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82A7F51ED5F0E000BA27F0 /* Constants.swift */; };
+		FF82A7F91ED5F13000BA27F0 /* AppHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82A7F81ED5F13000BA27F0 /* AppHelpers.swift */; };
+		FF82A7FA1ED5F13000BA27F0 /* AppHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82A7F81ED5F13000BA27F0 /* AppHelpers.swift */; };
+		FF82A7FC1ED5F5D000BA27F0 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82A7FB1ED5F5D000BA27F0 /* WatchSessionManager.swift */; };
+		FF82A7FF1ED5F6EA00BA27F0 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82A7FE1ED5F6EA00BA27F0 /* WatchSessionManager.swift */; };
 		FF834F401ECC7346000DE055 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F3F1ECC7346000DE055 /* Expense.swift */; };
 		FF834F421ECC75EE000DE055 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F411ECC75EE000DE055 /* Persistable.swift */; };
 		FF834F441ECC76B2000DE055 /* ExpenseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F431ECC76B2000DE055 /* ExpenseManager.swift */; };
@@ -114,6 +132,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				FF82A7EC1ED5CC7B00BA27F0 /* RealmSwift.framework in Embed Frameworks */,
+				FF82A7EA1ED5CC7B00BA27F0 /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +144,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				FF82A7E81ED5CC7400BA27F0 /* RealmSwift.framework in Embed Frameworks */,
+				FF82A7E61ED5CC7400BA27F0 /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,6 +199,11 @@
 		FF82A7D81ED5C9DC00BA27F0 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		FF82A7E11ED5CA0500BA27F0 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		FF82A7E21ED5CA0500BA27F0 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		FF82A7F41ED5D01C00BA27F0 /* FamilyPocketWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "FamilyPocketWatch Extension.entitlements"; sourceTree = "<group>"; };
+		FF82A7F51ED5F0E000BA27F0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FF82A7F81ED5F13000BA27F0 /* AppHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppHelpers.swift; sourceTree = "<group>"; };
+		FF82A7FB1ED5F5D000BA27F0 /* WatchSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
+		FF82A7FE1ED5F6EA00BA27F0 /* WatchSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
 		FF834F3F1ECC7346000DE055 /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		FF834F411ECC75EE000DE055 /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
 		FF834F431ECC76B2000DE055 /* ExpenseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseManager.swift; sourceTree = "<group>"; };
@@ -253,7 +280,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF82A7E91ED5CC7B00BA27F0 /* Realm.framework in Frameworks */,
 				FF82A7E41ED5CA0500BA27F0 /* RealmSwift.framework in Frameworks */,
+				FF82A7EB1ED5CC7B00BA27F0 /* RealmSwift.framework in Frameworks */,
 				FF82A7E31ED5CA0500BA27F0 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +291,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF82A7E51ED5CC7400BA27F0 /* Realm.framework in Frameworks */,
+				FF82A7E71ED5CC7400BA27F0 /* RealmSwift.framework in Frameworks */,
 				FF82A7D91ED5C9DC00BA27F0 /* Realm.framework in Frameworks */,
 				C9A051EF6FABA965F350AB53 /* Pods_FamilyPocket.framework in Frameworks */,
 				FF82A7DA1ED5C9DC00BA27F0 /* RealmSwift.framework in Frameworks */,
@@ -388,6 +419,7 @@
 				FFA47C281EC89EE700465E11 /* CategoryManager */,
 				FFA47C231EC88FE000465E11 /* RealmModels */,
 				FFA47C221EC88FC000465E11 /* RealmDataImporter */,
+				FF82A7FB1ED5F5D000BA27F0 /* WatchSessionManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -433,6 +465,7 @@
 			children = (
 				FFA47C3F1EC8E30E00465E11 /* FlatUIColors.swift */,
 				FFA47C3B1EC8BB0E00465E11 /* KeyboardUtility.swift */,
+				FF82A7F51ED5F0E000BA27F0 /* Constants.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -450,11 +483,13 @@
 		FFA47C6E1EC8F47F00465E11 /* FamilyPocketWatch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FF82A7F41ED5D01C00BA27F0 /* FamilyPocketWatch Extension.entitlements */,
 				FFA47C711EC8F47F00465E11 /* InterfaceController.swift */,
 				FFAC0E851ED59FBC00AF26C4 /* CategoriesInterfaceController.swift */,
 				FFA47C731EC8F47F00465E11 /* ExtensionDelegate.swift */,
 				FFA47C751EC8F47F00465E11 /* NotificationController.swift */,
 				FFA47C771EC8F47F00465E11 /* ComplicationController.swift */,
+				FF82A7FE1ED5F6EA00BA27F0 /* WatchSessionManager.swift */,
 				FFA47C791EC8F47F00465E11 /* Assets.xcassets */,
 				FFA47C7B1EC8F47F00465E11 /* Info.plist */,
 				FFA47C6F1EC8F47F00465E11 /* Supporting Files */,
@@ -586,6 +621,7 @@
 				FFB47E681EA955D700B36507 /* NSObject+ClassName.swift */,
 				FFA47C2D1EC8A69D00465E11 /* String+UIColor.swift */,
 				FFA47C3D1EC8CB6100465E11 /* UIColor+FamilyPocket.swift */,
+				FF82A7F81ED5F13000BA27F0 /* AppHelpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -710,6 +746,11 @@
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 54HW5825ZV;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					FFB47E2B1EA94B2A00B36507 = {
 						CreatedOnToolsVersion = 8.3;
@@ -910,6 +951,13 @@
 				FFA47C741EC8F47F00465E11 /* ExtensionDelegate.swift in Sources */,
 				FFAC0E861ED59FBC00AF26C4 /* CategoriesInterfaceController.swift in Sources */,
 				FFA47C721EC8F47F00465E11 /* InterfaceController.swift in Sources */,
+				FF82A7F11ED5CF7200BA27F0 /* Expense.swift in Sources */,
+				FF82A7FA1ED5F13000BA27F0 /* AppHelpers.swift in Sources */,
+				FF82A7F31ED5CF7E00BA27F0 /* Persistable.swift in Sources */,
+				FF82A7F21ED5CF7400BA27F0 /* Income.swift in Sources */,
+				FF82A7F01ED5CF7000BA27F0 /* Category.swift in Sources */,
+				FF82A7FF1ED5F6EA00BA27F0 /* WatchSessionManager.swift in Sources */,
+				FF82A7F71ED5F0E000BA27F0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -937,6 +985,8 @@
 				FFA47C321EC8A6F000465E11 /* UIColor+LighterDarker.swift in Sources */,
 				FF05CB601EC87EE000192647 /* ExpenseSummaryViewController.swift in Sources */,
 				FF05CB621EC87EE000192647 /* HostingViewController.swift in Sources */,
+				FF82A7FC1ED5F5D000BA27F0 /* WatchSessionManager.swift in Sources */,
+				FF82A7F61ED5F0E000BA27F0 /* Constants.swift in Sources */,
 				FFB47E691EA955D700B36507 /* NSObject+ClassName.swift in Sources */,
 				FFA47C271EC8912000465E11 /* RealmDataImporter.swift in Sources */,
 				FFB47E301EA94B2A00B36507 /* AppDelegate.swift in Sources */,
@@ -955,6 +1005,7 @@
 				FF05CB5F1EC87EE000192647 /* Animator.swift in Sources */,
 				FFA47C351EC8A78600465E11 /* CategoryCollectionViewDelegate.swift in Sources */,
 				FFA7D7661EC7948C009DF4C3 /* CategoryCollectionViewCell.swift in Sources */,
+				FF82A7F91ED5F13000BA27F0 /* AppHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1061,6 +1112,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "FamilyPocketWatch Extension/FamilyPocketWatch Extension.entitlements";
 				DEVELOPMENT_TEAM = 54HW5825ZV;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1083,6 +1135,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "FamilyPocketWatch Extension/FamilyPocketWatch Extension.entitlements";
 				DEVELOPMENT_TEAM = 54HW5825ZV;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

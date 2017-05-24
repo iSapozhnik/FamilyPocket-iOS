@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch42" orientation="portrait">
+    <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -11,55 +11,60 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller alwaysBounce="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="FamilyPocketWatch" customModuleProvider="target">
+                <controller spacing="0.0" alwaysBounce="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="FamilyPocketWatch" customModuleProvider="target">
                     <items>
-                        <group width="1" alignment="left" layout="vertical" spacing="1" id="l3f-vo-EKH">
+                        <group width="136" height="151" alignment="left" layout="vertical" spacing="1" id="l3f-vo-EKH">
                             <items>
                                 <label width="1" alignment="left" text="0.00" textAlignment="right" id="zOV-9O-KtP">
                                     <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                 </label>
-                                <group width="1" alignment="left" id="4US-gg-iTa">
+                                <group width="1" height="38" alignment="left" id="4US-gg-iTa">
                                     <items>
                                         <button width="0.33000000000000002" height="1" alignment="left" title="1" id="Xly-FX-Rpe"/>
                                         <button width="0.33000000000000002" height="1" alignment="left" title="2" id="bXz-rN-uhh"/>
-                                        <button width="0.33000000000000002" alignment="left" title="3" id="NC9-jB-iAZ"/>
+                                        <button width="0.33000000000000002" height="1" alignment="left" title="3" id="NC9-jB-iAZ"/>
                                     </items>
+                                    <variation key="device=watch38mm" height="32"/>
                                 </group>
-                                <group width="1" alignment="left" id="xJb-1N-SlT">
+                                <group width="1" height="38" alignment="left" id="xJb-1N-SlT">
                                     <items>
-                                        <button width="0.33000000000000002" alignment="left" title="4" id="0y2-2f-baV"/>
-                                        <button width="0.33000000000000002" alignment="left" title="5" id="8Ty-Ru-cMB"/>
-                                        <button width="0.33000000000000002" alignment="left" title="6" id="w3i-az-8Al"/>
+                                        <button width="0.33000000000000002" height="1" alignment="left" title="4" id="0y2-2f-baV"/>
+                                        <button width="0.33000000000000002" height="1" alignment="left" title="5" id="8Ty-Ru-cMB"/>
+                                        <button width="0.33000000000000002" height="1" alignment="left" title="6" id="w3i-az-8Al"/>
                                     </items>
+                                    <variation key="device=watch38mm" height="32"/>
                                 </group>
-                                <group width="1" alignment="left" id="331-dN-85y">
+                                <group width="1" height="38" alignment="left" id="331-dN-85y">
                                     <items>
-                                        <button width="0.33000000000000002" alignment="left" title="7" id="63c-kS-ZZb"/>
-                                        <button width="0.33000000000000002" alignment="left" title="8" id="Qfg-y5-hyL"/>
-                                        <button width="0.33000000000000002" alignment="left" title="9" id="3HA-6e-3Be"/>
+                                        <button width="0.33000000000000002" height="1" alignment="left" title="7" id="63c-kS-ZZb"/>
+                                        <button width="0.33000000000000002" height="1" alignment="left" title="8" id="Qfg-y5-hyL"/>
+                                        <button width="0.33000000000000002" height="1" alignment="left" title="9" id="3HA-6e-3Be"/>
                                     </items>
+                                    <variation key="device=watch38mm" height="32"/>
                                 </group>
-                                <group width="1" alignment="left" id="JfG-kP-MJm">
+                                <group width="1" height="38" alignment="left" id="JfG-kP-MJm">
                                     <items>
-                                        <button width="0.33000000000000002" alignment="left" title="0" id="rdr-bB-2T2"/>
-                                        <button width="0.33000000000000002" alignment="left" title="OK" id="XNu-wD-Sbz">
+                                        <button width="0.33000000000000002" height="1" alignment="left" title="0" id="rdr-bB-2T2"/>
+                                        <button width="0.33000000000000002" height="1" alignment="left" title="OK" id="XNu-wD-Sbz">
                                             <color key="backgroundColor" red="0.34056776760000002" green="0.63175529584285717" blue="0.5257632136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <segue destination="dO2-is-L5g" kind="push" id="NrP-bt-2mJ"/>
                                             </connections>
                                         </button>
-                                        <button width="0.33000000000000002" alignment="left" title="Del" id="a8o-aV-D1p">
+                                        <button width="0.33000000000000002" height="1" alignment="left" title="Del" id="a8o-aV-D1p">
                                             <color key="backgroundColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </button>
                                     </items>
+                                    <variation key="device=watch38mm" height="32"/>
                                 </group>
                             </items>
+                            <variation key="device=watch42mm" height="174" width="156"/>
                         </group>
                     </items>
                     <color key="backgroundColor" red="0.34056776760000002" green="0.80801087620000001" blue="0.5257632136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="219.69230769230771" y="344.79487179487182"/>
+            <point key="canvasLocation" x="218.82051282051285" y="343.92307692307696"/>
         </scene>
         <!--Categories Interface Controller-->
         <scene sceneID="eeX-uQ-0sd">
@@ -68,10 +73,11 @@
                     <items>
                         <table alignment="left" id="d5B-vn-iC5">
                             <items>
-                                <tableRow id="XJ3-g6-q6H">
+                                <tableRow identifier="Categories" id="XJ3-g6-q6H">
                                     <group key="rootItem" width="1" alignment="left" id="Lwx-KN-l8M">
                                         <items>
                                             <imageView width="27" alignment="left" verticalAlignment="center" image="Barbell-80" contentMode="scaleAspectFill" id="HEX-5o-eL6"/>
+                                            <separator height="30" alignment="left" verticalAlignment="center" id="HSj-41-g0R"/>
                                             <label height="1" alignment="left" text="Label" id="I2S-yQ-hcS"/>
                                         </items>
                                     </group>

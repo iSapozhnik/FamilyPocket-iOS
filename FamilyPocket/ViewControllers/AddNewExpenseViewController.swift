@@ -64,7 +64,7 @@ class AddNewExpenseViewController: BaseViewController, CategoryDelegate {
         
         collectionView.register(UINib.init(nibName: "CategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
         
-        updateCategories(forSegmen: 0)
+//        updateCategories(forSegmen: 0)
         
         kbUtility = KeyboardUtility { (height: CGFloat, duration :TimeInterval) in
             
