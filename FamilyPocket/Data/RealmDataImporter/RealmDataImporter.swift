@@ -13,6 +13,14 @@ let initialDataImportedKey: String = "familypocket.initialDataImportedKey"
 
 class RealmDataImporter {
     
+    static func setDefaultRealmConfig() {
+        let directory: URL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.Ivan.Sapozhnik.FamilyPocket")!
+        let realmPath = directory.path.appending("db.realm")
+        var configuration = Realm.Configuration.defaultConfiguration
+        configuration.fileURL = URL(string: realmPath)
+        Realm.Configuration.defaultConfiguration = configuration
+    }
+    
     static func databaseURL() {
         if let url = Realm.Configuration.defaultConfiguration.fileURL {
             print("Realm database: \(url.absoluteString)")

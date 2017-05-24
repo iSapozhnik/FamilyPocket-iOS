@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		205EEA62DF6E821C42E82BDA /* Pods_FamilyPocketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B2B8DD6A76593EC86FD9EE /* Pods_FamilyPocketTests.framework */; };
-		E778E06F0492577B97658544 /* Pods_FamilyPocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA04944A7179E23DE58CB724 /* Pods_FamilyPocket.framework */; };
+		30188C071F6D12AD12EE04DF /* Pods_FamilyPocketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3EB916557C7D9C24126075 /* Pods_FamilyPocketTests.framework */; };
+		C9A051EF6FABA965F350AB53 /* Pods_FamilyPocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1726722BD8E29EE92B0B5B3 /* Pods_FamilyPocket.framework */; };
 		FF05CB5D1EC87EE000192647 /* AddNewExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05CB541EC87EE000192647 /* AddNewExpenseViewController.swift */; };
 		FF05CB5E1EC87EE000192647 /* AddNewExpenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF05CB551EC87EE000192647 /* AddNewExpenseViewController.xib */; };
 		FF05CB5F1EC87EE000192647 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05CB561EC87EE000192647 /* Animator.swift */; };
@@ -18,6 +18,10 @@
 		FF05CB631EC87EE000192647 /* PrivateTransitionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05CB5A1EC87EE000192647 /* PrivateTransitionContext.swift */; };
 		FF05CB641EC87EE000192647 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05CB5B1EC87EE000192647 /* SettingsViewController.swift */; };
 		FF05CB651EC87EE000192647 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF05CB5C1EC87EE000192647 /* SettingsViewController.xib */; };
+		FF82A7D91ED5C9DC00BA27F0 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF82A7D71ED5C9DC00BA27F0 /* Realm.framework */; };
+		FF82A7DA1ED5C9DC00BA27F0 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF82A7D81ED5C9DC00BA27F0 /* RealmSwift.framework */; };
+		FF82A7E31ED5CA0500BA27F0 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF82A7E11ED5CA0500BA27F0 /* Realm.framework */; };
+		FF82A7E41ED5CA0500BA27F0 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF82A7E21ED5CA0500BA27F0 /* RealmSwift.framework */; };
 		FF834F401ECC7346000DE055 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F3F1ECC7346000DE055 /* Expense.swift */; };
 		FF834F421ECC75EE000DE055 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F411ECC75EE000DE055 /* Persistable.swift */; };
 		FF834F441ECC76B2000DE055 /* ExpenseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF834F431ECC76B2000DE055 /* ExpenseManager.swift */; };
@@ -63,6 +67,7 @@
 		FFA7D7611EC790A3009DF4C3 /* CubeAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7D75C1EC790A3009DF4C3 /* CubeAttributesAnimator.swift */; };
 		FFA7D7661EC7948C009DF4C3 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7D7641EC7948C009DF4C3 /* CategoryCollectionViewCell.swift */; };
 		FFA7D7671EC7948C009DF4C3 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFA7D7651EC7948C009DF4C3 /* CategoryCollectionViewCell.xib */; };
+		FFAC0E861ED59FBC00AF26C4 /* CategoriesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAC0E851ED59FBC00AF26C4 /* CategoriesInterfaceController.swift */; };
 		FFB47E301EA94B2A00B36507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47E2F1EA94B2A00B36507 /* AppDelegate.swift */; };
 		FFB47E371EA94B2A00B36507 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB47E361EA94B2A00B36507 /* Assets.xcassets */; };
 		FFB47E3A1EA94B2A00B36507 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB47E381EA94B2A00B36507 /* LaunchScreen.storyboard */; };
@@ -103,6 +108,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		FF8BAA1C1ED5C613004DB42D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8BAA211ED5C640004DB42D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFA47C841EC8F47F00465E11 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,12 +153,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		27422B3779408EE6FD0D0936 /* Pods-FamilyPocketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyPocketTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FamilyPocketTests/Pods-FamilyPocketTests.release.xcconfig"; sourceTree = "<group>"; };
-		311D483D7BC4071819FE95C0 /* Pods-FamilyPocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyPocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-FamilyPocket/Pods-FamilyPocket.release.xcconfig"; sourceTree = "<group>"; };
-		86D83943B08B5D59E8AD6567 /* Pods-FamilyPocketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyPocketTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FamilyPocketTests/Pods-FamilyPocketTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B0B2B8DD6A76593EC86FD9EE /* Pods_FamilyPocketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FamilyPocketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1626303587FFBC6398A3C55 /* Pods-FamilyPocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyPocket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FamilyPocket/Pods-FamilyPocket.debug.xcconfig"; sourceTree = "<group>"; };
-		DA04944A7179E23DE58CB724 /* Pods_FamilyPocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FamilyPocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0446EE0608E4BC48FE230584 /* Pods-FamilyPocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyPocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-FamilyPocket/Pods-FamilyPocket.release.xcconfig"; sourceTree = "<group>"; };
+		3D6645C97141E1E8ECB2AE94 /* Pods-FamilyPocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyPocket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FamilyPocket/Pods-FamilyPocket.debug.xcconfig"; sourceTree = "<group>"; };
+		603C05996D8984957DE9D9C9 /* Pods_FamilyPocket_FamilyPocketWatch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FamilyPocket_FamilyPocketWatch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		662A99DE8F22B8068DF9435C /* Pods-FamilyPocket-FamilyPocketWatch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyPocket-FamilyPocketWatch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-FamilyPocket-FamilyPocketWatch Extension/Pods-FamilyPocket-FamilyPocketWatch Extension.release.xcconfig"; sourceTree = "<group>"; };
+		77B997DB85229508798934A9 /* Pods-FamilyPocketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyPocketTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FamilyPocketTests/Pods-FamilyPocketTests.release.xcconfig"; sourceTree = "<group>"; };
+		A63FB913BFBBDA9941EF789E /* Pods-FamilyPocketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyPocketTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FamilyPocketTests/Pods-FamilyPocketTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AB12CEA53181C86149561454 /* Pods_FamilyPocketWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FamilyPocketWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCC75F01461FB77AB65D107C /* Pods-FamilyPocket-FamilyPocketWatch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyPocket-FamilyPocketWatch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FamilyPocket-FamilyPocketWatch Extension/Pods-FamilyPocket-FamilyPocketWatch Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		BD949137C15384EDB898854A /* Pods_FamilyPocketWatch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FamilyPocketWatch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1726722BD8E29EE92B0B5B3 /* Pods_FamilyPocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FamilyPocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB3EB916557C7D9C24126075 /* Pods_FamilyPocketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FamilyPocketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF05CB541EC87EE000192647 /* AddNewExpenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewExpenseViewController.swift; sourceTree = "<group>"; };
 		FF05CB551EC87EE000192647 /* AddNewExpenseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNewExpenseViewController.xib; sourceTree = "<group>"; };
 		FF05CB561EC87EE000192647 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
@@ -143,6 +173,10 @@
 		FF05CB5A1EC87EE000192647 /* PrivateTransitionContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateTransitionContext.swift; sourceTree = "<group>"; };
 		FF05CB5B1EC87EE000192647 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FF05CB5C1EC87EE000192647 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		FF82A7D71ED5C9DC00BA27F0 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		FF82A7D81ED5C9DC00BA27F0 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		FF82A7E11ED5CA0500BA27F0 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		FF82A7E21ED5CA0500BA27F0 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		FF834F3F1ECC7346000DE055 /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		FF834F411ECC75EE000DE055 /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
 		FF834F431ECC76B2000DE055 /* ExpenseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseManager.swift; sourceTree = "<group>"; };
@@ -191,6 +225,8 @@
 		FFA7D75C1EC790A3009DF4C3 /* CubeAttributesAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubeAttributesAnimator.swift; sourceTree = "<group>"; };
 		FFA7D7641EC7948C009DF4C3 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFA7D7651EC7948C009DF4C3 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		FFAC0E851ED59FBC00AF26C4 /* CategoriesInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesInterfaceController.swift; sourceTree = "<group>"; };
+		FFAC0E871ED5A07D00AF26C4 /* FamilyPocket.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FamilyPocket.entitlements; sourceTree = "<group>"; };
 		FFB47E2C1EA94B2A00B36507 /* FamilyPocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyPocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB47E2F1EA94B2A00B36507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFB47E361EA94B2A00B36507 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -217,6 +253,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF82A7E41ED5CA0500BA27F0 /* RealmSwift.framework in Frameworks */,
+				FF82A7E31ED5CA0500BA27F0 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +262,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E778E06F0492577B97658544 /* Pods_FamilyPocket.framework in Frameworks */,
+				FF82A7D91ED5C9DC00BA27F0 /* Realm.framework in Frameworks */,
+				C9A051EF6FABA965F350AB53 /* Pods_FamilyPocket.framework in Frameworks */,
+				FF82A7DA1ED5C9DC00BA27F0 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +272,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				205EEA62DF6E821C42E82BDA /* Pods_FamilyPocketTests.framework in Frameworks */,
+				30188C071F6D12AD12EE04DF /* Pods_FamilyPocketTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,22 +286,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7ABDE897EC1EB186D4CCAE47 /* Frameworks */ = {
+		77BB6FC6495E5A93D3FA65B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DA04944A7179E23DE58CB724 /* Pods_FamilyPocket.framework */,
-				B0B2B8DD6A76593EC86FD9EE /* Pods_FamilyPocketTests.framework */,
+				D1726722BD8E29EE92B0B5B3 /* Pods_FamilyPocket.framework */,
+				DB3EB916557C7D9C24126075 /* Pods_FamilyPocketTests.framework */,
+				AB12CEA53181C86149561454 /* Pods_FamilyPocketWatch.framework */,
+				BD949137C15384EDB898854A /* Pods_FamilyPocketWatch_Extension.framework */,
+				603C05996D8984957DE9D9C9 /* Pods_FamilyPocket_FamilyPocketWatch_Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B07E0A67420C07D2A68DA9F7 /* Pods */ = {
+		C3E5B03DD33CA8E03BE91F10 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D1626303587FFBC6398A3C55 /* Pods-FamilyPocket.debug.xcconfig */,
-				311D483D7BC4071819FE95C0 /* Pods-FamilyPocket.release.xcconfig */,
-				86D83943B08B5D59E8AD6567 /* Pods-FamilyPocketTests.debug.xcconfig */,
-				27422B3779408EE6FD0D0936 /* Pods-FamilyPocketTests.release.xcconfig */,
+				3D6645C97141E1E8ECB2AE94 /* Pods-FamilyPocket.debug.xcconfig */,
+				0446EE0608E4BC48FE230584 /* Pods-FamilyPocket.release.xcconfig */,
+				A63FB913BFBBDA9941EF789E /* Pods-FamilyPocketTests.debug.xcconfig */,
+				77B997DB85229508798934A9 /* Pods-FamilyPocketTests.release.xcconfig */,
+				BCC75F01461FB77AB65D107C /* Pods-FamilyPocket-FamilyPocketWatch Extension.debug.xcconfig */,
+				662A99DE8F22B8068DF9435C /* Pods-FamilyPocket-FamilyPocketWatch Extension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -288,6 +333,26 @@
 				FF834F621ECCDC2B000DE055 /* EditCategoryViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FF82A7D61ED5C9DC00BA27F0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				FF82A7D71ED5C9DC00BA27F0 /* Realm.framework */,
+				FF82A7D81ED5C9DC00BA27F0 /* RealmSwift.framework */,
+			);
+			name = iOS;
+			path = Frameworks/iOS;
+			sourceTree = "<group>";
+		};
+		FF82A7E01ED5CA0500BA27F0 /* WatchOS */ = {
+			isa = PBXGroup;
+			children = (
+				FF82A7E11ED5CA0500BA27F0 /* Realm.framework */,
+				FF82A7E21ED5CA0500BA27F0 /* RealmSwift.framework */,
+			);
+			name = WatchOS;
+			path = Frameworks/WatchOS;
 			sourceTree = "<group>";
 		};
 		FF834F551ECC978A000DE055 /* Presenter */ = {
@@ -386,6 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				FFA47C711EC8F47F00465E11 /* InterfaceController.swift */,
+				FFAC0E851ED59FBC00AF26C4 /* CategoriesInterfaceController.swift */,
 				FFA47C731EC8F47F00465E11 /* ExtensionDelegate.swift */,
 				FFA47C751EC8F47F00465E11 /* NotificationController.swift */,
 				FFA47C771EC8F47F00465E11 /* ComplicationController.swift */,
@@ -450,6 +516,8 @@
 		FFB47E231EA94B2A00B36507 = {
 			isa = PBXGroup;
 			children = (
+				FF82A7E01ED5CA0500BA27F0 /* WatchOS */,
+				FF82A7D61ED5C9DC00BA27F0 /* iOS */,
 				FFB47E2E1EA94B2A00B36507 /* FamilyPocket */,
 				FFA47C1D1EC88F9600465E11 /* Resources */,
 				FFB47E431EA94B2A00B36507 /* FamilyPocketTests */,
@@ -457,8 +525,8 @@
 				FFA47C5F1EC8F47F00465E11 /* FamilyPocketWatch */,
 				FFA47C6E1EC8F47F00465E11 /* FamilyPocketWatch Extension */,
 				FFB47E2D1EA94B2A00B36507 /* Products */,
-				B07E0A67420C07D2A68DA9F7 /* Pods */,
-				7ABDE897EC1EB186D4CCAE47 /* Frameworks */,
+				C3E5B03DD33CA8E03BE91F10 /* Pods */,
+				77BB6FC6495E5A93D3FA65B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -477,6 +545,7 @@
 		FFB47E2E1EA94B2A00B36507 /* FamilyPocket */ = {
 			isa = PBXGroup;
 			children = (
+				FFAC0E871ED5A07D00AF26C4 /* FamilyPocket.entitlements */,
 				FFB47E2F1EA94B2A00B36507 /* AppDelegate.swift */,
 				FF05CB531EC87EE000192647 /* ViewControllers */,
 				FFA7D74B1EC76446009DF4C3 /* Views */,
@@ -549,6 +618,7 @@
 				FFA47C661EC8F47F00465E11 /* Sources */,
 				FFA47C671EC8F47F00465E11 /* Frameworks */,
 				FFA47C681EC8F47F00465E11 /* Resources */,
+				FF8BAA1C1ED5C613004DB42D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -563,13 +633,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFB47E541EA94B2A00B36507 /* Build configuration list for PBXNativeTarget "FamilyPocket" */;
 			buildPhases = (
-				CB3C5E4DACDA0FBCE68FB6CB /* [CP] Check Pods Manifest.lock */,
+				90C903FFA9EDAF998D0F40D5 /* [CP] Check Pods Manifest.lock */,
 				FFB47E281EA94B2A00B36507 /* Sources */,
 				FFB47E291EA94B2A00B36507 /* Frameworks */,
 				FFB47E2A1EA94B2A00B36507 /* Resources */,
-				EB28B593F98B17FBA65DD63D /* [CP] Embed Pods Frameworks */,
-				9DF732CDD74ED90F67A4F113 /* [CP] Copy Pods Resources */,
 				FFA47C861EC8F47F00465E11 /* Embed Watch Content */,
+				1B6EA51E71502BBD6AF145F3 /* [CP] Embed Pods Frameworks */,
+				BF55FC9145452B36B752CE7B /* [CP] Copy Pods Resources */,
+				FF8BAA211ED5C640004DB42D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -585,12 +656,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFB47E571EA94B2A00B36507 /* Build configuration list for PBXNativeTarget "FamilyPocketTests" */;
 			buildPhases = (
-				C4298A6F1C48A62D833C6756 /* [CP] Check Pods Manifest.lock */,
+				A4C4697CEF77ED0033160B13 /* [CP] Check Pods Manifest.lock */,
 				FFB47E3C1EA94B2A00B36507 /* Sources */,
 				FFB47E3D1EA94B2A00B36507 /* Frameworks */,
 				FFB47E3E1EA94B2A00B36507 /* Resources */,
-				A955BBC127C40C8752BBC4F3 /* [CP] Embed Pods Frameworks */,
-				725ED4BDCE5285CB95373C14 /* [CP] Copy Pods Resources */,
+				DF422C6D3C7328EBDB21BA96 /* [CP] Embed Pods Frameworks */,
+				7691F795EF1D0DE35C1FDD89 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -644,6 +715,11 @@
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 54HW5825ZV;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					FFB47E3F1EA94B2A00B36507 = {
 						CreatedOnToolsVersion = 8.3;
@@ -732,82 +808,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		725ED4BDCE5285CB95373C14 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FamilyPocketTests/Pods-FamilyPocketTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9DF732CDD74ED90F67A4F113 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FamilyPocket/Pods-FamilyPocket-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A955BBC127C40C8752BBC4F3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FamilyPocketTests/Pods-FamilyPocketTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C4298A6F1C48A62D833C6756 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CB3C5E4DACDA0FBCE68FB6CB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		EB28B593F98B17FBA65DD63D /* [CP] Embed Pods Frameworks */ = {
+		1B6EA51E71502BBD6AF145F3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -822,6 +823,81 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FamilyPocket/Pods-FamilyPocket-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7691F795EF1D0DE35C1FDD89 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FamilyPocketTests/Pods-FamilyPocketTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90C903FFA9EDAF998D0F40D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A4C4697CEF77ED0033160B13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BF55FC9145452B36B752CE7B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FamilyPocket/Pods-FamilyPocket-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF422C6D3C7328EBDB21BA96 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FamilyPocketTests/Pods-FamilyPocketTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -832,6 +908,7 @@
 				FFA47C761EC8F47F00465E11 /* NotificationController.swift in Sources */,
 				FFA47C781EC8F47F00465E11 /* ComplicationController.swift in Sources */,
 				FFA47C741EC8F47F00465E11 /* ExtensionDelegate.swift in Sources */,
+				FFAC0E861ED59FBC00AF26C4 /* CategoriesInterfaceController.swift in Sources */,
 				FFA47C721EC8F47F00465E11 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -950,6 +1027,7 @@
 				DEVELOPMENT_TEAM = 54HW5825ZV;
 				IBSC_MODULE = FamilyPocketWatch_Extension;
 				INFOPLIST_FILE = FamilyPocketWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ivan.Sapozhnik.FamilyPocket.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -968,6 +1046,7 @@
 				DEVELOPMENT_TEAM = 54HW5825ZV;
 				IBSC_MODULE = FamilyPocketWatch_Extension;
 				INFOPLIST_FILE = FamilyPocketWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ivan.Sapozhnik.FamilyPocket.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -983,6 +1062,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				DEVELOPMENT_TEAM = 54HW5825ZV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks/WatchOS",
+				);
 				INFOPLIST_FILE = "FamilyPocketWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ivan.Sapozhnik.FamilyPocket.watchkitapp.watchkitextension;
@@ -1000,6 +1084,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				DEVELOPMENT_TEAM = 54HW5825ZV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks/WatchOS",
+				);
 				INFOPLIST_FILE = "FamilyPocketWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ivan.Sapozhnik.FamilyPocket.watchkitapp.watchkitextension;
@@ -1109,11 +1198,18 @@
 		};
 		FFB47E551EA94B2A00B36507 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1626303587FFBC6398A3C55 /* Pods-FamilyPocket.debug.xcconfig */;
+			baseConfigurationReference = 3D6645C97141E1E8ECB2AE94 /* Pods-FamilyPocket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FamilyPocket/FamilyPocket.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 54HW5825ZV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks/iOS",
+					"$(PROJECT_DIR)/Frameworks/WatchOS",
+				);
 				INFOPLIST_FILE = FamilyPocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ivan.Sapozhnik.FamilyPocket;
@@ -1125,11 +1221,18 @@
 		};
 		FFB47E561EA94B2A00B36507 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 311D483D7BC4071819FE95C0 /* Pods-FamilyPocket.release.xcconfig */;
+			baseConfigurationReference = 0446EE0608E4BC48FE230584 /* Pods-FamilyPocket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FamilyPocket/FamilyPocket.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 54HW5825ZV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks/iOS",
+					"$(PROJECT_DIR)/Frameworks/WatchOS",
+				);
 				INFOPLIST_FILE = FamilyPocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ivan.Sapozhnik.FamilyPocket;
@@ -1141,10 +1244,11 @@
 		};
 		FFB47E581EA94B2A00B36507 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86D83943B08B5D59E8AD6567 /* Pods-FamilyPocketTests.debug.xcconfig */;
+			baseConfigurationReference = A63FB913BFBBDA9941EF789E /* Pods-FamilyPocketTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = FamilyPocketTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Ivan-Sapozhnik.FamilyPocketTests";
@@ -1156,10 +1260,11 @@
 		};
 		FFB47E591EA94B2A00B36507 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27422B3779408EE6FD0D0936 /* Pods-FamilyPocketTests.release.xcconfig */;
+			baseConfigurationReference = 77B997DB85229508798934A9 /* Pods-FamilyPocketTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = FamilyPocketTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Ivan-Sapozhnik.FamilyPocketTests";

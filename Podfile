@@ -1,16 +1,21 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
 use_frameworks!
 
 def main_pods
-	pod 'RealmSwift'
-	pod 'SegmentedProgressView'
+	# pod 'RealmSwift'
 end
 
 target 'FamilyPocket' do
-	main_pods
-end
+	platform :ios, '9.0'
 
-target 'FamilyPocketTests' do
 	main_pods
+
+    target 'FamilyPocketTests' do
+        inherit! :search_paths
+    end
+
+ #    target 'FamilyPocketWatch Extension' do
+	# 	platform :watchos, '2.0'
+	# 	inherit! :search_paths
+	# end
 end

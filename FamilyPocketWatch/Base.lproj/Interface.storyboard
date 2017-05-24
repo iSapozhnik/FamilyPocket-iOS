@@ -61,22 +61,30 @@
             </objects>
             <point key="canvasLocation" x="219.69230769230771" y="344.79487179487182"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Categories Interface Controller-->
         <scene sceneID="eeX-uQ-0sd">
             <objects>
-                <controller id="dO2-is-L5g">
+                <controller id="dO2-is-L5g" customClass="CategoriesInterfaceController" customModule="FamilyPocketWatch_Extension">
                     <items>
                         <table alignment="left" id="d5B-vn-iC5">
                             <items>
                                 <tableRow id="XJ3-g6-q6H">
-                                    <group key="rootItem" width="1" alignment="left" id="Lwx-KN-l8M"/>
+                                    <group key="rootItem" width="1" alignment="left" id="Lwx-KN-l8M">
+                                        <items>
+                                            <imageView width="27" alignment="left" verticalAlignment="center" image="Barbell-80" contentMode="scaleAspectFill" id="HEX-5o-eL6"/>
+                                            <label height="1" alignment="left" text="Label" id="I2S-yQ-hcS"/>
+                                        </items>
+                                    </group>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="tableView" destination="d5B-vn-iC5" id="eLS-MC-9tF"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="507" y="345"/>
+            <point key="canvasLocation" x="506.51282051282055" y="344.79487179487182"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
